@@ -30,7 +30,6 @@ namespace TheQuest
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheQuestForm));
-            this.Dungeon = new System.Windows.Forms.PictureBox();
             this.labelMove = new System.Windows.Forms.Label();
             this.buttonMoveUp = new System.Windows.Forms.Button();
             this.buttonMoveLeft = new System.Windows.Forms.Button();
@@ -70,7 +69,6 @@ namespace TheQuest
             this.pictureBoxQuiver = new System.Windows.Forms.PictureBox();
             this.pictureBoxShield = new System.Windows.Forms.PictureBox();
             this.pictureBoxWizard = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Dungeon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory2)).BeginInit();
             this.tableLayoutPanelStatus.SuspendLayout();
             this.tableLayoutPanelInventory.SuspendLayout();
@@ -93,16 +91,6 @@ namespace TheQuest
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShield)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWizard)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Dungeon
-            // 
-            this.Dungeon.Image = ((System.Drawing.Image)(resources.GetObject("Dungeon.Image")));
-            this.Dungeon.Location = new System.Drawing.Point(0, 0);
-            this.Dungeon.Name = "Dungeon";
-            this.Dungeon.Size = new System.Drawing.Size(900, 600);
-            this.Dungeon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Dungeon.TabIndex = 0;
-            this.Dungeon.TabStop = false;
             // 
             // labelMove
             // 
@@ -210,6 +198,7 @@ namespace TheQuest
             // 
             // tableLayoutPanelStatus
             // 
+            this.tableLayoutPanelStatus.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanelStatus.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanelStatus.ColumnCount = 2;
             this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.4908F));
@@ -338,6 +327,7 @@ namespace TheQuest
             // 
             // tableLayoutPanelInventory
             // 
+            this.tableLayoutPanelInventory.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanelInventory.ColumnCount = 5;
             this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -349,7 +339,7 @@ namespace TheQuest
             this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory1, 0, 0);
             this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory5, 1, 0);
             this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory2, 0, 0);
-            this.tableLayoutPanelInventory.Location = new System.Drawing.Point(146, 477);
+            this.tableLayoutPanelInventory.Location = new System.Drawing.Point(117, 478);
             this.tableLayoutPanelInventory.MinimumSize = new System.Drawing.Size(70, 70);
             this.tableLayoutPanelInventory.Name = "tableLayoutPanelInventory";
             this.tableLayoutPanelInventory.RowCount = 1;
@@ -369,6 +359,7 @@ namespace TheQuest
             // 
             // pictureBoxInventory1
             // 
+            this.pictureBoxInventory1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxInventory1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory1.Image")));
             this.pictureBoxInventory1.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxInventory1.Name = "pictureBoxInventory1";
@@ -407,6 +398,7 @@ namespace TheQuest
             this.pictureBoxPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxPlayer.TabIndex = 11;
             this.pictureBoxPlayer.TabStop = false;
+            this.pictureBoxPlayer.Visible = false;
             // 
             // pictureBoxSword
             // 
@@ -418,6 +410,7 @@ namespace TheQuest
             this.pictureBoxSword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxSword.TabIndex = 12;
             this.pictureBoxSword.TabStop = false;
+            this.pictureBoxSword.Visible = false;
             // 
             // pictureBoxBat
             // 
@@ -429,6 +422,7 @@ namespace TheQuest
             this.pictureBoxBat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxBat.TabIndex = 13;
             this.pictureBoxBat.TabStop = false;
+            this.pictureBoxBat.Visible = false;
             // 
             // pictureBoxGhoul
             // 
@@ -440,6 +434,7 @@ namespace TheQuest
             this.pictureBoxGhoul.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxGhoul.TabIndex = 14;
             this.pictureBoxGhoul.TabStop = false;
+            this.pictureBoxGhoul.Visible = false;
             // 
             // pictureBoxGhost
             // 
@@ -451,6 +446,7 @@ namespace TheQuest
             this.pictureBoxGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxGhost.TabIndex = 15;
             this.pictureBoxGhost.TabStop = false;
+            this.pictureBoxGhost.Visible = false;
             // 
             // pictureBoxBattleAxe
             // 
@@ -462,6 +458,7 @@ namespace TheQuest
             this.pictureBoxBattleAxe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxBattleAxe.TabIndex = 16;
             this.pictureBoxBattleAxe.TabStop = false;
+            this.pictureBoxBattleAxe.Visible = false;
             // 
             // pictureBoxBomb
             // 
@@ -473,6 +470,7 @@ namespace TheQuest
             this.pictureBoxBomb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxBomb.TabIndex = 17;
             this.pictureBoxBomb.TabStop = false;
+            this.pictureBoxBomb.Visible = false;
             // 
             // pictureBoxBow
             // 
@@ -484,6 +482,7 @@ namespace TheQuest
             this.pictureBoxBow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxBow.TabIndex = 18;
             this.pictureBoxBow.TabStop = false;
+            this.pictureBoxBow.Visible = false;
             // 
             // pictureBoxMace
             // 
@@ -495,6 +494,7 @@ namespace TheQuest
             this.pictureBoxMace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxMace.TabIndex = 19;
             this.pictureBoxMace.TabStop = false;
+            this.pictureBoxMace.Visible = false;
             // 
             // pictureBoxPotionBlue
             // 
@@ -506,6 +506,7 @@ namespace TheQuest
             this.pictureBoxPotionBlue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxPotionBlue.TabIndex = 20;
             this.pictureBoxPotionBlue.TabStop = false;
+            this.pictureBoxPotionBlue.Visible = false;
             // 
             // pictureBoxPotionRed
             // 
@@ -517,6 +518,7 @@ namespace TheQuest
             this.pictureBoxPotionRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxPotionRed.TabIndex = 21;
             this.pictureBoxPotionRed.TabStop = false;
+            this.pictureBoxPotionRed.Visible = false;
             // 
             // pictureBoxQuiver
             // 
@@ -528,6 +530,7 @@ namespace TheQuest
             this.pictureBoxQuiver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxQuiver.TabIndex = 22;
             this.pictureBoxQuiver.TabStop = false;
+            this.pictureBoxQuiver.Visible = false;
             // 
             // pictureBoxShield
             // 
@@ -539,6 +542,7 @@ namespace TheQuest
             this.pictureBoxShield.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxShield.TabIndex = 23;
             this.pictureBoxShield.TabStop = false;
+            this.pictureBoxShield.Visible = false;
             // 
             // pictureBoxWizard
             // 
@@ -550,12 +554,16 @@ namespace TheQuest
             this.pictureBoxWizard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxWizard.TabIndex = 24;
             this.pictureBoxWizard.TabStop = false;
+            this.pictureBoxWizard.Visible = false;
             // 
             // TheQuestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1168, 607);
+            this.Controls.Add(this.pictureBoxPlayer);
             this.Controls.Add(this.pictureBoxWizard);
             this.Controls.Add(this.pictureBoxShield);
             this.Controls.Add(this.pictureBoxQuiver);
@@ -569,7 +577,6 @@ namespace TheQuest
             this.Controls.Add(this.pictureBoxGhoul);
             this.Controls.Add(this.pictureBoxBat);
             this.Controls.Add(this.pictureBoxSword);
-            this.Controls.Add(this.pictureBoxPlayer);
             this.Controls.Add(this.tableLayoutPanelInventory);
             this.Controls.Add(this.tableLayoutPanelStatus);
             this.Controls.Add(this.buttonAttackDown);
@@ -582,10 +589,8 @@ namespace TheQuest
             this.Controls.Add(this.buttonMoveLeft);
             this.Controls.Add(this.buttonMoveUp);
             this.Controls.Add(this.labelMove);
-            this.Controls.Add(this.Dungeon);
             this.Name = "TheQuestForm";
             this.Text = "TheQuest";
-            ((System.ComponentModel.ISupportInitialize)(this.Dungeon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory2)).EndInit();
             this.tableLayoutPanelStatus.ResumeLayout(false);
             this.tableLayoutPanelStatus.PerformLayout();
@@ -614,8 +619,6 @@ namespace TheQuest
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox Dungeon;
         private System.Windows.Forms.Label labelMove;
         private System.Windows.Forms.Button buttonMoveUp;
         private System.Windows.Forms.Button buttonMoveLeft;
