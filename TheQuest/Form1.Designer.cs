@@ -1,7 +1,7 @@
 ﻿
 namespace TheQuest
 {
-    partial class Form1
+    partial class TheQuestForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,13 +29,632 @@ namespace TheQuest
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheQuestForm));
+            this.Dungeon = new System.Windows.Forms.PictureBox();
+            this.labelMove = new System.Windows.Forms.Label();
+            this.buttonMoveUp = new System.Windows.Forms.Button();
+            this.buttonMoveLeft = new System.Windows.Forms.Button();
+            this.buttonMoveRight = new System.Windows.Forms.Button();
+            this.buttonMoveDown = new System.Windows.Forms.Button();
+            this.buttonAttackDown = new System.Windows.Forms.Button();
+            this.buttonAttackRight = new System.Windows.Forms.Button();
+            this.buttonAttackLeft = new System.Windows.Forms.Button();
+            this.buttonAttackUp = new System.Windows.Forms.Button();
+            this.labelAttack = new System.Windows.Forms.Label();
+            this.pictureBoxInventory2 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanelStatus = new System.Windows.Forms.TableLayoutPanel();
+            this.labelPlayerHitPoint = new System.Windows.Forms.Label();
+            this.labelPlayerStatus = new System.Windows.Forms.Label();
+            this.labelEnemyHitPoint2 = new System.Windows.Forms.Label();
+            this.labelEnemyStatus1 = new System.Windows.Forms.Label();
+            this.labelEnemyHitPoint1 = new System.Windows.Forms.Label();
+            this.labelEnemyStatus2 = new System.Windows.Forms.Label();
+            this.labelEnemyHitPoint3 = new System.Windows.Forms.Label();
+            this.labelEnemyStatus3 = new System.Windows.Forms.Label();
+            this.tableLayoutPanelInventory = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBoxInventory5 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPlayer = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSword = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBat = new System.Windows.Forms.PictureBox();
+            this.pictureBoxGhoul = new System.Windows.Forms.PictureBox();
+            this.pictureBoxGhost = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBattleAxe = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBomb = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBow = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMace = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPotionBlue = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPotionRed = new System.Windows.Forms.PictureBox();
+            this.pictureBoxQuiver = new System.Windows.Forms.PictureBox();
+            this.pictureBoxShield = new System.Windows.Forms.PictureBox();
+            this.pictureBoxWizard = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Dungeon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory2)).BeginInit();
+            this.tableLayoutPanelStatus.SuspendLayout();
+            this.tableLayoutPanelInventory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGhoul)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGhost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBattleAxe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBomb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPotionBlue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPotionRed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuiver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShield)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWizard)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // Dungeon
+            // 
+            this.Dungeon.Image = ((System.Drawing.Image)(resources.GetObject("Dungeon.Image")));
+            this.Dungeon.Location = new System.Drawing.Point(0, 0);
+            this.Dungeon.Name = "Dungeon";
+            this.Dungeon.Size = new System.Drawing.Size(900, 600);
+            this.Dungeon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Dungeon.TabIndex = 0;
+            this.Dungeon.TabStop = false;
+            // 
+            // labelMove
+            // 
+            this.labelMove.AutoSize = true;
+            this.labelMove.Location = new System.Drawing.Point(950, 40);
+            this.labelMove.Name = "labelMove";
+            this.labelMove.Size = new System.Drawing.Size(36, 12);
+            this.labelMove.TabIndex = 1;
+            this.labelMove.Text = "Move";
+            // 
+            // buttonMoveUp
+            // 
+            this.buttonMoveUp.Location = new System.Drawing.Point(995, 66);
+            this.buttonMoveUp.Name = "buttonMoveUp";
+            this.buttonMoveUp.Size = new System.Drawing.Size(75, 23);
+            this.buttonMoveUp.TabIndex = 2;
+            this.buttonMoveUp.Text = "Up";
+            this.buttonMoveUp.UseVisualStyleBackColor = true;
+            // 
+            // buttonMoveLeft
+            // 
+            this.buttonMoveLeft.Location = new System.Drawing.Point(952, 95);
+            this.buttonMoveLeft.Name = "buttonMoveLeft";
+            this.buttonMoveLeft.Size = new System.Drawing.Size(75, 23);
+            this.buttonMoveLeft.TabIndex = 2;
+            this.buttonMoveLeft.Text = "Left";
+            this.buttonMoveLeft.UseVisualStyleBackColor = true;
+            // 
+            // buttonMoveRight
+            // 
+            this.buttonMoveRight.Location = new System.Drawing.Point(1033, 95);
+            this.buttonMoveRight.Name = "buttonMoveRight";
+            this.buttonMoveRight.Size = new System.Drawing.Size(75, 23);
+            this.buttonMoveRight.TabIndex = 2;
+            this.buttonMoveRight.Text = "Right";
+            this.buttonMoveRight.UseVisualStyleBackColor = true;
+            // 
+            // buttonMoveDown
+            // 
+            this.buttonMoveDown.Location = new System.Drawing.Point(995, 124);
+            this.buttonMoveDown.Name = "buttonMoveDown";
+            this.buttonMoveDown.Size = new System.Drawing.Size(75, 23);
+            this.buttonMoveDown.TabIndex = 2;
+            this.buttonMoveDown.Text = "Down";
+            this.buttonMoveDown.UseVisualStyleBackColor = true;
+            // 
+            // buttonAttackDown
+            // 
+            this.buttonAttackDown.Location = new System.Drawing.Point(995, 276);
+            this.buttonAttackDown.Name = "buttonAttackDown";
+            this.buttonAttackDown.Size = new System.Drawing.Size(75, 23);
+            this.buttonAttackDown.TabIndex = 4;
+            this.buttonAttackDown.Text = "Down";
+            this.buttonAttackDown.UseVisualStyleBackColor = true;
+            this.buttonAttackDown.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonAttackRight
+            // 
+            this.buttonAttackRight.Location = new System.Drawing.Point(1033, 247);
+            this.buttonAttackRight.Name = "buttonAttackRight";
+            this.buttonAttackRight.Size = new System.Drawing.Size(75, 23);
+            this.buttonAttackRight.TabIndex = 5;
+            this.buttonAttackRight.Text = "Right";
+            this.buttonAttackRight.UseVisualStyleBackColor = true;
+            this.buttonAttackRight.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // buttonAttackLeft
+            // 
+            this.buttonAttackLeft.Location = new System.Drawing.Point(952, 247);
+            this.buttonAttackLeft.Name = "buttonAttackLeft";
+            this.buttonAttackLeft.Size = new System.Drawing.Size(75, 23);
+            this.buttonAttackLeft.TabIndex = 6;
+            this.buttonAttackLeft.Text = "Left";
+            this.buttonAttackLeft.UseVisualStyleBackColor = true;
+            this.buttonAttackLeft.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // buttonAttackUp
+            // 
+            this.buttonAttackUp.Location = new System.Drawing.Point(995, 218);
+            this.buttonAttackUp.Name = "buttonAttackUp";
+            this.buttonAttackUp.Size = new System.Drawing.Size(75, 23);
+            this.buttonAttackUp.TabIndex = 7;
+            this.buttonAttackUp.Text = "Up";
+            this.buttonAttackUp.UseVisualStyleBackColor = true;
+            this.buttonAttackUp.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // labelAttack
+            // 
+            this.labelAttack.AutoSize = true;
+            this.labelAttack.Location = new System.Drawing.Point(950, 192);
+            this.labelAttack.Name = "labelAttack";
+            this.labelAttack.Size = new System.Drawing.Size(39, 12);
+            this.labelAttack.TabIndex = 3;
+            this.labelAttack.Text = "Attack";
+            // 
+            // pictureBoxInventory2
+            // 
+            this.pictureBoxInventory2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory2.Image")));
+            this.pictureBoxInventory2.Location = new System.Drawing.Point(79, 3);
+            this.pictureBoxInventory2.Name = "pictureBoxInventory2";
+            this.pictureBoxInventory2.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory2.TabIndex = 8;
+            this.pictureBoxInventory2.TabStop = false;
+            // 
+            // tableLayoutPanelStatus
+            // 
+            this.tableLayoutPanelStatus.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanelStatus.ColumnCount = 2;
+            this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.4908F));
+            this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.5092F));
+            this.tableLayoutPanelStatus.Controls.Add(this.labelEnemyStatus3, 0, 3);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelEnemyHitPoint3, 0, 3);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelPlayerHitPoint, 1, 0);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelPlayerStatus, 0, 0);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelEnemyStatus1, 0, 1);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelEnemyStatus2, 0, 2);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelEnemyHitPoint1, 1, 1);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelEnemyHitPoint2, 1, 2);
+            this.tableLayoutPanelStatus.Location = new System.Drawing.Point(944, 366);
+            this.tableLayoutPanelStatus.Name = "tableLayoutPanelStatus";
+            this.tableLayoutPanelStatus.RowCount = 4;
+            this.tableLayoutPanelStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelStatus.Size = new System.Drawing.Size(179, 120);
+            this.tableLayoutPanelStatus.TabIndex = 9;
+            // 
+            // labelPlayerHitPoint
+            // 
+            this.labelPlayerHitPoint.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPlayerHitPoint.AutoSize = true;
+            this.labelPlayerHitPoint.Location = new System.Drawing.Point(76, 1);
+            this.labelPlayerHitPoint.Name = "labelPlayerHitPoint";
+            this.labelPlayerHitPoint.Size = new System.Drawing.Size(99, 28);
+            this.labelPlayerHitPoint.TabIndex = 1;
+            this.labelPlayerHitPoint.Text = "playerHitPoint";
+            this.labelPlayerHitPoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelPlayerStatus
+            // 
+            this.labelPlayerStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPlayerStatus.AutoSize = true;
+            this.labelPlayerStatus.Location = new System.Drawing.Point(4, 1);
+            this.labelPlayerStatus.Name = "labelPlayerStatus";
+            this.labelPlayerStatus.Size = new System.Drawing.Size(65, 28);
+            this.labelPlayerStatus.TabIndex = 0;
+            this.labelPlayerStatus.Text = "Player";
+            this.labelPlayerStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelEnemyHitPoint2
+            // 
+            this.labelEnemyHitPoint2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEnemyHitPoint2.AutoSize = true;
+            this.labelEnemyHitPoint2.Location = new System.Drawing.Point(76, 59);
+            this.labelEnemyHitPoint2.Name = "labelEnemyHitPoint2";
+            this.labelEnemyHitPoint2.Size = new System.Drawing.Size(99, 28);
+            this.labelEnemyHitPoint2.TabIndex = 2;
+            this.labelEnemyHitPoint2.Text = "enemyHitPoint2";
+            this.labelEnemyHitPoint2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelEnemyStatus1
+            // 
+            this.labelEnemyStatus1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEnemyStatus1.AutoSize = true;
+            this.labelEnemyStatus1.Location = new System.Drawing.Point(4, 30);
+            this.labelEnemyStatus1.Name = "labelEnemyStatus1";
+            this.labelEnemyStatus1.Size = new System.Drawing.Size(65, 28);
+            this.labelEnemyStatus1.TabIndex = 3;
+            this.labelEnemyStatus1.Text = "Enemy1";
+            this.labelEnemyStatus1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelEnemyHitPoint1
+            // 
+            this.labelEnemyHitPoint1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEnemyHitPoint1.AutoSize = true;
+            this.labelEnemyHitPoint1.Location = new System.Drawing.Point(76, 30);
+            this.labelEnemyHitPoint1.Name = "labelEnemyHitPoint1";
+            this.labelEnemyHitPoint1.Size = new System.Drawing.Size(99, 28);
+            this.labelEnemyHitPoint1.TabIndex = 4;
+            this.labelEnemyHitPoint1.Text = "enemyHitPoint1";
+            this.labelEnemyHitPoint1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelEnemyStatus2
+            // 
+            this.labelEnemyStatus2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEnemyStatus2.AutoSize = true;
+            this.labelEnemyStatus2.Location = new System.Drawing.Point(4, 59);
+            this.labelEnemyStatus2.Name = "labelEnemyStatus2";
+            this.labelEnemyStatus2.Size = new System.Drawing.Size(65, 28);
+            this.labelEnemyStatus2.TabIndex = 5;
+            this.labelEnemyStatus2.Text = "Enemy2";
+            this.labelEnemyStatus2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelEnemyHitPoint3
+            // 
+            this.labelEnemyHitPoint3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEnemyHitPoint3.AutoSize = true;
+            this.labelEnemyHitPoint3.Location = new System.Drawing.Point(76, 88);
+            this.labelEnemyHitPoint3.Name = "labelEnemyHitPoint3";
+            this.labelEnemyHitPoint3.Size = new System.Drawing.Size(99, 31);
+            this.labelEnemyHitPoint3.TabIndex = 6;
+            this.labelEnemyHitPoint3.Text = "enemyHitPoint3";
+            this.labelEnemyHitPoint3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelEnemyStatus3
+            // 
+            this.labelEnemyStatus3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEnemyStatus3.AutoSize = true;
+            this.labelEnemyStatus3.Location = new System.Drawing.Point(4, 88);
+            this.labelEnemyStatus3.Name = "labelEnemyStatus3";
+            this.labelEnemyStatus3.Size = new System.Drawing.Size(65, 31);
+            this.labelEnemyStatus3.TabIndex = 7;
+            this.labelEnemyStatus3.Text = "Enemy3";
+            this.labelEnemyStatus3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanelInventory
+            // 
+            this.tableLayoutPanelInventory.ColumnCount = 5;
+            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory3, 0, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory4, 0, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory1, 0, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory5, 1, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory2, 0, 0);
+            this.tableLayoutPanelInventory.Location = new System.Drawing.Point(146, 477);
+            this.tableLayoutPanelInventory.MinimumSize = new System.Drawing.Size(70, 70);
+            this.tableLayoutPanelInventory.Name = "tableLayoutPanelInventory";
+            this.tableLayoutPanelInventory.RowCount = 1;
+            this.tableLayoutPanelInventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelInventory.Size = new System.Drawing.Size(400, 80);
+            this.tableLayoutPanelInventory.TabIndex = 10;
+            // 
+            // pictureBoxInventory5
+            // 
+            this.pictureBoxInventory5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory5.Image")));
+            this.pictureBoxInventory5.Location = new System.Drawing.Point(307, 3);
+            this.pictureBoxInventory5.Name = "pictureBoxInventory5";
+            this.pictureBoxInventory5.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory5.TabIndex = 9;
+            this.pictureBoxInventory5.TabStop = false;
+            // 
+            // pictureBoxInventory1
+            // 
+            this.pictureBoxInventory1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory1.Image")));
+            this.pictureBoxInventory1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxInventory1.Name = "pictureBoxInventory1";
+            this.pictureBoxInventory1.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory1.TabIndex = 10;
+            this.pictureBoxInventory1.TabStop = false;
+            // 
+            // pictureBoxInventory4
+            // 
+            this.pictureBoxInventory4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory4.Image")));
+            this.pictureBoxInventory4.Location = new System.Drawing.Point(231, 3);
+            this.pictureBoxInventory4.Name = "pictureBoxInventory4";
+            this.pictureBoxInventory4.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory4.TabIndex = 11;
+            this.pictureBoxInventory4.TabStop = false;
+            // 
+            // pictureBoxInventory3
+            // 
+            this.pictureBoxInventory3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory3.Image")));
+            this.pictureBoxInventory3.Location = new System.Drawing.Point(155, 3);
+            this.pictureBoxInventory3.Name = "pictureBoxInventory3";
+            this.pictureBoxInventory3.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory3.TabIndex = 12;
+            this.pictureBoxInventory3.TabStop = false;
+            // 
+            // pictureBoxPlayer
+            // 
+            this.pictureBoxPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxPlayer.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPlayer.Image")));
+            this.pictureBoxPlayer.Location = new System.Drawing.Point(117, 88);
+            this.pictureBoxPlayer.Name = "pictureBoxPlayer";
+            this.pictureBoxPlayer.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxPlayer.TabIndex = 11;
+            this.pictureBoxPlayer.TabStop = false;
+            // 
+            // pictureBoxSword
+            // 
+            this.pictureBoxSword.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxSword.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSword.Image")));
+            this.pictureBoxSword.Location = new System.Drawing.Point(173, 88);
+            this.pictureBoxSword.Name = "pictureBoxSword";
+            this.pictureBoxSword.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxSword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxSword.TabIndex = 12;
+            this.pictureBoxSword.TabStop = false;
+            // 
+            // pictureBoxBat
+            // 
+            this.pictureBoxBat.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBat.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBat.Image")));
+            this.pictureBoxBat.Location = new System.Drawing.Point(117, 256);
+            this.pictureBoxBat.Name = "pictureBoxBat";
+            this.pictureBoxBat.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxBat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxBat.TabIndex = 13;
+            this.pictureBoxBat.TabStop = false;
+            // 
+            // pictureBoxGhoul
+            // 
+            this.pictureBoxGhoul.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxGhoul.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxGhoul.Image")));
+            this.pictureBoxGhoul.Location = new System.Drawing.Point(285, 88);
+            this.pictureBoxGhoul.Name = "pictureBoxGhoul";
+            this.pictureBoxGhoul.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxGhoul.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxGhoul.TabIndex = 14;
+            this.pictureBoxGhoul.TabStop = false;
+            // 
+            // pictureBoxGhost
+            // 
+            this.pictureBoxGhost.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxGhost.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxGhost.Image")));
+            this.pictureBoxGhost.Location = new System.Drawing.Point(117, 312);
+            this.pictureBoxGhost.Name = "pictureBoxGhost";
+            this.pictureBoxGhost.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxGhost.TabIndex = 15;
+            this.pictureBoxGhost.TabStop = false;
+            // 
+            // pictureBoxBattleAxe
+            // 
+            this.pictureBoxBattleAxe.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBattleAxe.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBattleAxe.Image")));
+            this.pictureBoxBattleAxe.Location = new System.Drawing.Point(397, 88);
+            this.pictureBoxBattleAxe.Name = "pictureBoxBattleAxe";
+            this.pictureBoxBattleAxe.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxBattleAxe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxBattleAxe.TabIndex = 16;
+            this.pictureBoxBattleAxe.TabStop = false;
+            // 
+            // pictureBoxBomb
+            // 
+            this.pictureBoxBomb.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBomb.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBomb.Image")));
+            this.pictureBoxBomb.Location = new System.Drawing.Point(455, 88);
+            this.pictureBoxBomb.Name = "pictureBoxBomb";
+            this.pictureBoxBomb.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxBomb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxBomb.TabIndex = 17;
+            this.pictureBoxBomb.TabStop = false;
+            // 
+            // pictureBoxBow
+            // 
+            this.pictureBoxBow.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBow.Image")));
+            this.pictureBoxBow.Location = new System.Drawing.Point(511, 88);
+            this.pictureBoxBow.Name = "pictureBoxBow";
+            this.pictureBoxBow.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxBow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxBow.TabIndex = 18;
+            this.pictureBoxBow.TabStop = false;
+            // 
+            // pictureBoxMace
+            // 
+            this.pictureBoxMace.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxMace.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMace.Image")));
+            this.pictureBoxMace.Location = new System.Drawing.Point(567, 88);
+            this.pictureBoxMace.Name = "pictureBoxMace";
+            this.pictureBoxMace.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxMace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxMace.TabIndex = 19;
+            this.pictureBoxMace.TabStop = false;
+            // 
+            // pictureBoxPotionBlue
+            // 
+            this.pictureBoxPotionBlue.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxPotionBlue.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPotionBlue.Image")));
+            this.pictureBoxPotionBlue.Location = new System.Drawing.Point(623, 88);
+            this.pictureBoxPotionBlue.Name = "pictureBoxPotionBlue";
+            this.pictureBoxPotionBlue.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxPotionBlue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxPotionBlue.TabIndex = 20;
+            this.pictureBoxPotionBlue.TabStop = false;
+            // 
+            // pictureBoxPotionRed
+            // 
+            this.pictureBoxPotionRed.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxPotionRed.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPotionRed.Image")));
+            this.pictureBoxPotionRed.Location = new System.Drawing.Point(679, 88);
+            this.pictureBoxPotionRed.Name = "pictureBoxPotionRed";
+            this.pictureBoxPotionRed.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxPotionRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxPotionRed.TabIndex = 21;
+            this.pictureBoxPotionRed.TabStop = false;
+            // 
+            // pictureBoxQuiver
+            // 
+            this.pictureBoxQuiver.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxQuiver.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuiver.Image")));
+            this.pictureBoxQuiver.Location = new System.Drawing.Point(735, 88);
+            this.pictureBoxQuiver.Name = "pictureBoxQuiver";
+            this.pictureBoxQuiver.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxQuiver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxQuiver.TabIndex = 22;
+            this.pictureBoxQuiver.TabStop = false;
+            // 
+            // pictureBoxShield
+            // 
+            this.pictureBoxShield.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxShield.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxShield.Image")));
+            this.pictureBoxShield.Location = new System.Drawing.Point(117, 144);
+            this.pictureBoxShield.Name = "pictureBoxShield";
+            this.pictureBoxShield.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxShield.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxShield.TabIndex = 23;
+            this.pictureBoxShield.TabStop = false;
+            // 
+            // pictureBoxWizard
+            // 
+            this.pictureBoxWizard.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWizard.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxWizard.Image")));
+            this.pictureBoxWizard.Location = new System.Drawing.Point(117, 200);
+            this.pictureBoxWizard.Name = "pictureBoxWizard";
+            this.pictureBoxWizard.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxWizard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxWizard.TabIndex = 24;
+            this.pictureBoxWizard.TabStop = false;
+            // 
+            // TheQuestForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size( 800, 450 );
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(1168, 607);
+            this.Controls.Add(this.pictureBoxWizard);
+            this.Controls.Add(this.pictureBoxShield);
+            this.Controls.Add(this.pictureBoxQuiver);
+            this.Controls.Add(this.pictureBoxPotionRed);
+            this.Controls.Add(this.pictureBoxPotionBlue);
+            this.Controls.Add(this.pictureBoxMace);
+            this.Controls.Add(this.pictureBoxBow);
+            this.Controls.Add(this.pictureBoxBomb);
+            this.Controls.Add(this.pictureBoxBattleAxe);
+            this.Controls.Add(this.pictureBoxGhost);
+            this.Controls.Add(this.pictureBoxGhoul);
+            this.Controls.Add(this.pictureBoxBat);
+            this.Controls.Add(this.pictureBoxSword);
+            this.Controls.Add(this.pictureBoxPlayer);
+            this.Controls.Add(this.tableLayoutPanelInventory);
+            this.Controls.Add(this.tableLayoutPanelStatus);
+            this.Controls.Add(this.buttonAttackDown);
+            this.Controls.Add(this.buttonAttackRight);
+            this.Controls.Add(this.buttonAttackLeft);
+            this.Controls.Add(this.buttonAttackUp);
+            this.Controls.Add(this.labelAttack);
+            this.Controls.Add(this.buttonMoveDown);
+            this.Controls.Add(this.buttonMoveRight);
+            this.Controls.Add(this.buttonMoveLeft);
+            this.Controls.Add(this.buttonMoveUp);
+            this.Controls.Add(this.labelMove);
+            this.Controls.Add(this.Dungeon);
+            this.Name = "TheQuestForm";
+            this.Text = "TheQuest";
+            ((System.ComponentModel.ISupportInitialize)(this.Dungeon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory2)).EndInit();
+            this.tableLayoutPanelStatus.ResumeLayout(false);
+            this.tableLayoutPanelStatus.PerformLayout();
+            this.tableLayoutPanelInventory.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGhoul)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGhost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBattleAxe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBomb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPotionBlue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPotionRed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuiver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShield)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWizard)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox Dungeon;
+        private System.Windows.Forms.Label labelMove;
+        private System.Windows.Forms.Button buttonMoveUp;
+        private System.Windows.Forms.Button buttonMoveLeft;
+        private System.Windows.Forms.Button buttonMoveRight;
+        private System.Windows.Forms.Button buttonMoveDown;
+        private System.Windows.Forms.Button buttonAttackDown;
+        private System.Windows.Forms.Button buttonAttackRight;
+        private System.Windows.Forms.Button buttonAttackLeft;
+        private System.Windows.Forms.Button buttonAttackUp;
+        private System.Windows.Forms.Label labelAttack;
+        private System.Windows.Forms.PictureBox pictureBoxInventory2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelStatus;
+        private System.Windows.Forms.Label labelPlayerHitPoint;
+        private System.Windows.Forms.Label labelPlayerStatus;
+        private System.Windows.Forms.Label labelEnemyStatus3;
+        private System.Windows.Forms.Label labelEnemyHitPoint3;
+        private System.Windows.Forms.Label labelEnemyStatus1;
+        private System.Windows.Forms.Label labelEnemyStatus2;
+        private System.Windows.Forms.Label labelEnemyHitPoint1;
+        private System.Windows.Forms.Label labelEnemyHitPoint2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelInventory;
+        private System.Windows.Forms.PictureBox pictureBoxInventory3;
+        private System.Windows.Forms.PictureBox pictureBoxInventory4;
+        private System.Windows.Forms.PictureBox pictureBoxInventory1;
+        private System.Windows.Forms.PictureBox pictureBoxInventory5;
+        private System.Windows.Forms.PictureBox pictureBoxPlayer;
+        private System.Windows.Forms.PictureBox pictureBoxSword;
+        private System.Windows.Forms.PictureBox pictureBoxBat;
+        private System.Windows.Forms.PictureBox pictureBoxGhoul;
+        private System.Windows.Forms.PictureBox pictureBoxGhost;
+        private System.Windows.Forms.PictureBox pictureBoxBattleAxe;
+        private System.Windows.Forms.PictureBox pictureBoxBomb;
+        private System.Windows.Forms.PictureBox pictureBoxBow;
+        private System.Windows.Forms.PictureBox pictureBoxMace;
+        private System.Windows.Forms.PictureBox pictureBoxPotionBlue;
+        private System.Windows.Forms.PictureBox pictureBoxPotionRed;
+        private System.Windows.Forms.PictureBox pictureBoxQuiver;
+        private System.Windows.Forms.PictureBox pictureBoxShield;
+        private System.Windows.Forms.PictureBox pictureBoxWizard;
     }
 }
 
