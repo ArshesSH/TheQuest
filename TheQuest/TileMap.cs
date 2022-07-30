@@ -9,17 +9,69 @@ namespace TheQuest
 {
     class TileMap
     {
-        public enum TileState
+        public enum Tile
         {
             Empty,
-            CanNotMove
+            Player,
+            Enemy,
+            Item
         }
-        List<TileState> tiles;
+        
+        private List<Tile> tiles;
+        private readonly int tileRow;
+        private readonly int tileCol;
 
-
-        public TileMap(int row, int col)
+        public readonly int tileSize;
+        public List<Tile> Tiles
         {
-            tiles = new List<TileState>( row * col );
+            get { return tiles; }
+            set { tiles = Tiles; }
+        }
+
+        public TileMap(int row, int col, int size)
+        {
+            tileRow = row;
+            tileCol = col;
+            tileSize = size;
+            tiles = new List<Tile>( row * col );
+        }
+
+        public bool CanMove(Point pos)
+        {
+            return IsTileStateAt( pos, Tile.Empty );
+        }
+        public bool IsTileStateAt( Point pos, Tile state)
+        {
+            return tiles[ConvertToIndex( pos )] == state;
+        }
+        public Point GetNextPos(Point pos, Point dir)
+        {
+            return new Point( pos.X + dir.X, pos.Y + dir.Y );
+        }
+        public bool FindAround(Point pos, int distance, Tile target)
+        {
+            for( int y = pos.Y - distance; y < pos.Y + distance; ++y )
+            {
+                for(int x = pos.X - distance; x < pos.X + distance; ++x )
+                {
+                    if( IsTileStateAt(new Point(x, y), target) )
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        private int ConvertToIndex( Point pos )
+        {
+            return tileRow * pos.Y + pos.X;   
+        }
+        private Point ConvertToPos( int index )
+        {
+            int x = index % tileRow;
+            int y = index / tileRow;
+            return new Point( x, y );
         }
     }
 }

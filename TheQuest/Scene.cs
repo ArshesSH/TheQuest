@@ -15,9 +15,9 @@ namespace TheQuest
     {
         private TileMap tileMap;
 
-        SceneStart(int row, int col)
+        SceneStart(int tileRow, int tileCol, int tileSize)
         {
-            tileMap = new TileMap( row, col );
+            tileMap = new TileMap( tileRow, tileCol, tileSize );
         }
         public void Update()
         {
