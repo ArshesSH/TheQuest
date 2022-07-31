@@ -9,6 +9,10 @@ namespace TheQuest
 {
     class Player : Actor
     {
+        public Player( Status status, Point pos )
+            :
+            base( status, pos )
+        { }
 
         public override void Move( TileMap tileMap, Point dir )
         {

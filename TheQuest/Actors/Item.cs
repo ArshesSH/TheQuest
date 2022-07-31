@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace TheQuest
 {
@@ -12,7 +13,9 @@ namespace TheQuest
         private int curCnt;
         private bool isConsumable;
 
-        Item(int cnt, bool consumable)
+        public Item(Point pos, int cnt, bool consumable)
+            :
+            base(pos)
         {
             maxCnt = cnt;
             curCnt = maxCnt;

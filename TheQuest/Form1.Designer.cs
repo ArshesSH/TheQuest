@@ -42,19 +42,19 @@ namespace TheQuest
             this.labelAttack = new System.Windows.Forms.Label();
             this.pictureBoxInventory2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelStatus = new System.Windows.Forms.TableLayoutPanel();
+            this.labelEnemyStatus3 = new System.Windows.Forms.Label();
+            this.labelEnemyHitPoint3 = new System.Windows.Forms.Label();
             this.labelPlayerHitPoint = new System.Windows.Forms.Label();
             this.labelPlayerStatus = new System.Windows.Forms.Label();
-            this.labelEnemyHitPoint2 = new System.Windows.Forms.Label();
             this.labelEnemyStatus1 = new System.Windows.Forms.Label();
-            this.labelEnemyHitPoint1 = new System.Windows.Forms.Label();
             this.labelEnemyStatus2 = new System.Windows.Forms.Label();
-            this.labelEnemyHitPoint3 = new System.Windows.Forms.Label();
-            this.labelEnemyStatus3 = new System.Windows.Forms.Label();
+            this.labelEnemyHitPoint1 = new System.Windows.Forms.Label();
+            this.labelEnemyHitPoint2 = new System.Windows.Forms.Label();
             this.tableLayoutPanelInventory = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBoxInventory5 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxInventory1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxInventory4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxInventory3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory5 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPlayer = new System.Windows.Forms.PictureBox();
             this.pictureBoxSword = new System.Windows.Forms.PictureBox();
             this.pictureBoxBat = new System.Windows.Forms.PictureBox();
@@ -72,10 +72,10 @@ namespace TheQuest
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory2)).BeginInit();
             this.tableLayoutPanelStatus.SuspendLayout();
             this.tableLayoutPanelInventory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBat)).BeginInit();
@@ -109,6 +109,7 @@ namespace TheQuest
             this.buttonMoveUp.TabIndex = 2;
             this.buttonMoveUp.Text = "Up";
             this.buttonMoveUp.UseVisualStyleBackColor = true;
+            this.buttonMoveUp.Click += new System.EventHandler(this.buttonMoveUp_Click);
             // 
             // buttonMoveLeft
             // 
@@ -145,7 +146,6 @@ namespace TheQuest
             this.buttonAttackDown.TabIndex = 4;
             this.buttonAttackDown.Text = "Down";
             this.buttonAttackDown.UseVisualStyleBackColor = true;
-            this.buttonAttackDown.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonAttackRight
             // 
@@ -155,7 +155,6 @@ namespace TheQuest
             this.buttonAttackRight.TabIndex = 5;
             this.buttonAttackRight.Text = "Right";
             this.buttonAttackRight.UseVisualStyleBackColor = true;
-            this.buttonAttackRight.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonAttackLeft
             // 
@@ -165,7 +164,6 @@ namespace TheQuest
             this.buttonAttackLeft.TabIndex = 6;
             this.buttonAttackLeft.Text = "Left";
             this.buttonAttackLeft.UseVisualStyleBackColor = true;
-            this.buttonAttackLeft.Click += new System.EventHandler(this.button3_Click);
             // 
             // buttonAttackUp
             // 
@@ -175,7 +173,6 @@ namespace TheQuest
             this.buttonAttackUp.TabIndex = 7;
             this.buttonAttackUp.Text = "Up";
             this.buttonAttackUp.UseVisualStyleBackColor = true;
-            this.buttonAttackUp.Click += new System.EventHandler(this.button4_Click);
             // 
             // labelAttack
             // 
@@ -221,6 +218,32 @@ namespace TheQuest
             this.tableLayoutPanelStatus.Size = new System.Drawing.Size(179, 120);
             this.tableLayoutPanelStatus.TabIndex = 9;
             // 
+            // labelEnemyStatus3
+            // 
+            this.labelEnemyStatus3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEnemyStatus3.AutoSize = true;
+            this.labelEnemyStatus3.Location = new System.Drawing.Point(4, 88);
+            this.labelEnemyStatus3.Name = "labelEnemyStatus3";
+            this.labelEnemyStatus3.Size = new System.Drawing.Size(65, 31);
+            this.labelEnemyStatus3.TabIndex = 7;
+            this.labelEnemyStatus3.Text = "Enemy3";
+            this.labelEnemyStatus3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelEnemyHitPoint3
+            // 
+            this.labelEnemyHitPoint3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEnemyHitPoint3.AutoSize = true;
+            this.labelEnemyHitPoint3.Location = new System.Drawing.Point(76, 88);
+            this.labelEnemyHitPoint3.Name = "labelEnemyHitPoint3";
+            this.labelEnemyHitPoint3.Size = new System.Drawing.Size(99, 31);
+            this.labelEnemyHitPoint3.TabIndex = 6;
+            this.labelEnemyHitPoint3.Text = "enemyHitPoint3";
+            this.labelEnemyHitPoint3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // labelPlayerHitPoint
             // 
             this.labelPlayerHitPoint.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -247,19 +270,6 @@ namespace TheQuest
             this.labelPlayerStatus.Text = "Player";
             this.labelPlayerStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelEnemyHitPoint2
-            // 
-            this.labelEnemyHitPoint2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEnemyHitPoint2.AutoSize = true;
-            this.labelEnemyHitPoint2.Location = new System.Drawing.Point(76, 59);
-            this.labelEnemyHitPoint2.Name = "labelEnemyHitPoint2";
-            this.labelEnemyHitPoint2.Size = new System.Drawing.Size(99, 28);
-            this.labelEnemyHitPoint2.TabIndex = 2;
-            this.labelEnemyHitPoint2.Text = "enemyHitPoint2";
-            this.labelEnemyHitPoint2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // labelEnemyStatus1
             // 
             this.labelEnemyStatus1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -272,19 +282,6 @@ namespace TheQuest
             this.labelEnemyStatus1.TabIndex = 3;
             this.labelEnemyStatus1.Text = "Enemy1";
             this.labelEnemyStatus1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelEnemyHitPoint1
-            // 
-            this.labelEnemyHitPoint1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEnemyHitPoint1.AutoSize = true;
-            this.labelEnemyHitPoint1.Location = new System.Drawing.Point(76, 30);
-            this.labelEnemyHitPoint1.Name = "labelEnemyHitPoint1";
-            this.labelEnemyHitPoint1.Size = new System.Drawing.Size(99, 28);
-            this.labelEnemyHitPoint1.TabIndex = 4;
-            this.labelEnemyHitPoint1.Text = "enemyHitPoint1";
-            this.labelEnemyHitPoint1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelEnemyStatus2
             // 
@@ -299,31 +296,31 @@ namespace TheQuest
             this.labelEnemyStatus2.Text = "Enemy2";
             this.labelEnemyStatus2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelEnemyHitPoint3
+            // labelEnemyHitPoint1
             // 
-            this.labelEnemyHitPoint3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelEnemyHitPoint1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEnemyHitPoint3.AutoSize = true;
-            this.labelEnemyHitPoint3.Location = new System.Drawing.Point(76, 88);
-            this.labelEnemyHitPoint3.Name = "labelEnemyHitPoint3";
-            this.labelEnemyHitPoint3.Size = new System.Drawing.Size(99, 31);
-            this.labelEnemyHitPoint3.TabIndex = 6;
-            this.labelEnemyHitPoint3.Text = "enemyHitPoint3";
-            this.labelEnemyHitPoint3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelEnemyHitPoint1.AutoSize = true;
+            this.labelEnemyHitPoint1.Location = new System.Drawing.Point(76, 30);
+            this.labelEnemyHitPoint1.Name = "labelEnemyHitPoint1";
+            this.labelEnemyHitPoint1.Size = new System.Drawing.Size(99, 28);
+            this.labelEnemyHitPoint1.TabIndex = 4;
+            this.labelEnemyHitPoint1.Text = "enemyHitPoint1";
+            this.labelEnemyHitPoint1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelEnemyStatus3
+            // labelEnemyHitPoint2
             // 
-            this.labelEnemyStatus3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelEnemyHitPoint2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEnemyStatus3.AutoSize = true;
-            this.labelEnemyStatus3.Location = new System.Drawing.Point(4, 88);
-            this.labelEnemyStatus3.Name = "labelEnemyStatus3";
-            this.labelEnemyStatus3.Size = new System.Drawing.Size(65, 31);
-            this.labelEnemyStatus3.TabIndex = 7;
-            this.labelEnemyStatus3.Text = "Enemy3";
-            this.labelEnemyStatus3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelEnemyHitPoint2.AutoSize = true;
+            this.labelEnemyHitPoint2.Location = new System.Drawing.Point(76, 59);
+            this.labelEnemyHitPoint2.Name = "labelEnemyHitPoint2";
+            this.labelEnemyHitPoint2.Size = new System.Drawing.Size(99, 28);
+            this.labelEnemyHitPoint2.TabIndex = 2;
+            this.labelEnemyHitPoint2.Text = "enemyHitPoint2";
+            this.labelEnemyHitPoint2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanelInventory
             // 
@@ -347,15 +344,25 @@ namespace TheQuest
             this.tableLayoutPanelInventory.Size = new System.Drawing.Size(400, 80);
             this.tableLayoutPanelInventory.TabIndex = 10;
             // 
-            // pictureBoxInventory5
+            // pictureBoxInventory3
             // 
-            this.pictureBoxInventory5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory5.Image")));
-            this.pictureBoxInventory5.Location = new System.Drawing.Point(307, 3);
-            this.pictureBoxInventory5.Name = "pictureBoxInventory5";
-            this.pictureBoxInventory5.Size = new System.Drawing.Size(70, 70);
-            this.pictureBoxInventory5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxInventory5.TabIndex = 9;
-            this.pictureBoxInventory5.TabStop = false;
+            this.pictureBoxInventory3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory3.Image")));
+            this.pictureBoxInventory3.Location = new System.Drawing.Point(155, 3);
+            this.pictureBoxInventory3.Name = "pictureBoxInventory3";
+            this.pictureBoxInventory3.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory3.TabIndex = 12;
+            this.pictureBoxInventory3.TabStop = false;
+            // 
+            // pictureBoxInventory4
+            // 
+            this.pictureBoxInventory4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory4.Image")));
+            this.pictureBoxInventory4.Location = new System.Drawing.Point(231, 3);
+            this.pictureBoxInventory4.Name = "pictureBoxInventory4";
+            this.pictureBoxInventory4.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory4.TabIndex = 11;
+            this.pictureBoxInventory4.TabStop = false;
             // 
             // pictureBoxInventory1
             // 
@@ -368,25 +375,15 @@ namespace TheQuest
             this.pictureBoxInventory1.TabIndex = 10;
             this.pictureBoxInventory1.TabStop = false;
             // 
-            // pictureBoxInventory4
+            // pictureBoxInventory5
             // 
-            this.pictureBoxInventory4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory4.Image")));
-            this.pictureBoxInventory4.Location = new System.Drawing.Point(231, 3);
-            this.pictureBoxInventory4.Name = "pictureBoxInventory4";
-            this.pictureBoxInventory4.Size = new System.Drawing.Size(70, 70);
-            this.pictureBoxInventory4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxInventory4.TabIndex = 11;
-            this.pictureBoxInventory4.TabStop = false;
-            // 
-            // pictureBoxInventory3
-            // 
-            this.pictureBoxInventory3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory3.Image")));
-            this.pictureBoxInventory3.Location = new System.Drawing.Point(155, 3);
-            this.pictureBoxInventory3.Name = "pictureBoxInventory3";
-            this.pictureBoxInventory3.Size = new System.Drawing.Size(70, 70);
-            this.pictureBoxInventory3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxInventory3.TabIndex = 12;
-            this.pictureBoxInventory3.TabStop = false;
+            this.pictureBoxInventory5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory5.Image")));
+            this.pictureBoxInventory5.Location = new System.Drawing.Point(307, 3);
+            this.pictureBoxInventory5.Name = "pictureBoxInventory5";
+            this.pictureBoxInventory5.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory5.TabIndex = 9;
+            this.pictureBoxInventory5.TabStop = false;
             // 
             // pictureBoxPlayer
             // 
@@ -595,10 +592,10 @@ namespace TheQuest
             this.tableLayoutPanelStatus.ResumeLayout(false);
             this.tableLayoutPanelStatus.PerformLayout();
             this.tableLayoutPanelInventory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBat)).EndInit();

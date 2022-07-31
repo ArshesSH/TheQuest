@@ -12,6 +12,10 @@ namespace TheQuest
         protected Status status;
         protected Point curPos;
 
+        public Actor(Point startPos)
+        {
+            curPos = startPos;
+        }
         public Actor(Status status_in, Point startPos)
         {
             status = status_in;
