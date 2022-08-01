@@ -9,19 +9,24 @@ namespace TheQuest
 {
     class Player : Actor
     {
-        public Player( Status status, Point pos )
+        public List<Item> Inventory = new List<Item>();
+        //public List<string> Weapons
+        //{
+        //    get
+        //    {
+        //        List<string> names = new List<string>();
+        //        foreach ()
+        //    }
+        //}
+        public Player( Status status, PointVec pos )
             :
             base( status, pos )
-        { }
+        {}
 
-        public override void Move( TileMap tileMap, Point dir )
+
+        new public void Move(PointVec dir, MyRect screenRect)
         {
-            base.Move( tileMap , dir );
-            if ( tileMap.IsTileStateAt( curTilePos, TileMap.Tile.Item ) ) 
-            {
-
-            }
+            base.Move( dir, screenRect );
         }
-        
     }
 }

@@ -12,10 +12,11 @@ namespace TheQuest
         private const int maxHP = 6;
         private const int damage = 2;
         private const int speed = 1;
+        private const int range = 1;
 
-        public Bat(Point pos)
+        public Bat(PointVec pos)
             :
-            base(new Status(maxHP, damage, speed), pos)
+            base(new Status(maxHP, damage, speed, 1), pos )
         { }
     }
 }

@@ -9,28 +9,52 @@ namespace TheQuest
 {
     abstract class Actor
     {
+        protected PointVec pos;
         protected Status status;
-        protected Point curTilePos;
+        
+        public Point Pos
+        {
+            get { return pos.P; }
+        }
+        public Actor( PointVec startPos )
+        {
+            pos = startPos;
+        }
+        public Actor( Status status, PointVec startPos)
+        {
+            this.status = status;
+            pos = startPos;
+        }
 
-        public Actor( Point startTilePos )
+        public void Move( PointVec dir, MyRect screenRect )
         {
-            curTilePos = startTilePos;
-        }
-        public Actor( Status status_in, Point startTilePos )
-        {
-            status = status_in;
-            curTilePos = startTilePos;
-        }
-        public Point GetRealPos(TileMap tileMap)
-        {
-            return tileMap.GetRealPos( curTilePos );
-        }
-        virtual public void Move( TileMap tileMap, Point dir )
-        {
-            Point nextPos = tileMap.GetNextPos( curTilePos, dir );
-            if ( tileMap.CanMove( nextPos ) )
+            PointVec nextPos = pos + dir * status.Speed;
+            if ( screenRect.IsContains( nextPos.P ) )
             {
-                curTilePos = nextPos;
+                pos = nextPos;
+            }
+        }
+        public void Damaged( int damage, Random random )
+        {
+            status.Damaged( random.Next( 1, damage ));
+        }
+        public void IncreaseHealth( int health, Random random )
+        {
+            status.IncreaseHealth( random.Next( 1, health ) );
+        }
+        public bool IsNearby(PointVec pos, int distanceSq)
+        {
+            return pos.GetDistanceSq() <= distanceSq;
+        }
+        public void Attack(PointVec dir, Actor target, Random random )
+        {
+            PointVec targetDir = target.pos - pos;
+            if( IsNearby(target.pos, status.Range * status.Range ) )
+            {
+                if ( dir.IsEqual( targetDir.GetNormalized() ) ) 
+                {
+                    target.Damaged( status.Damage, random );
+                }
             }
         }
     }

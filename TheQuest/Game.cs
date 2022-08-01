@@ -9,51 +9,35 @@ namespace TheQuest
 {
     class Game
     {
-        private Rectangle screenRect;
-        private TileMap tileMap;
+        private MyRect screenRect;
         private Player player;
         public Player GamePlayer
         {
             get { return player; }
         }
 
-        public Game(Rectangle rect)
+        public Game( MyRect rect )
         {
             screenRect = rect;
-            tileMap = new TileMap( 5, 5, 50 );
-            player = new Player( new Status( 3, 0, 1 ), new Point( 0, 0 ) );
+            player = new Player( new Status( 3, 0, 50, 0 ), new PointVec( 100, 60 ) );
         }
 
         public void UpdateModel()
         {
             
         }
-        public void PlayerMove(Point dir)
+        public void PlayerMove(PointVec dir)
         {
-            player.Move( tileMap, dir );
-            
+            player.Move( dir, screenRect );
         }
-        public void PlayerAttack(Point dir)
+        public void PlayerAttack(PointVec dir)
         {
 
         }
 
         public Point GetActorPos(Actor actor)
         {
-            return actor.GetRealPos(tileMap);
-        }
-
-        public bool IsRectOverlapWith( Rectangle lhs, Rectangle rhs )
-        {
-            return lhs.Top < rhs.Bottom && lhs.Bottom > rhs.Top && lhs.Left < rhs.Right && lhs.Right > rhs.Left;
-        }
-        public bool IsRectContains( Rectangle rect, Point pos )
-        {
-            return pos.X >= rect.Left && pos.X <= rect.Right && pos.Y >= rect.Top && pos.Y <= rect.Bottom;
-        }
-        public bool IsRectContains(Rectangle lhs, Rectangle rhs)
-        {
-            return rhs.Top >= lhs.Top && rhs.Bottom <= lhs.Bottom && rhs.Left >= lhs.Left && rhs.Right <= lhs.Right;
+            return actor.Pos;
         }
 
     }

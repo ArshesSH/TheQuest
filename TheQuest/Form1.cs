@@ -15,22 +15,22 @@ namespace TheQuest
         private Game game;
         private Random random = new Random();
 
-        private readonly Point dirUp = new Point( 0, -1 );
-        private readonly Point dirDown = new Point( 0, 1 );
-        private readonly Point dirLeft = new Point( -1, 0 );
-        private readonly Point dirRight = new Point( 1, 0 );
+        private readonly PointVec dirUp = new PointVec( 0, -1 );
+        private readonly PointVec dirDown = new PointVec( 0, 1 );
+        private readonly PointVec dirLeft = new PointVec( -1, 0 );
+        private readonly PointVec dirRight = new PointVec( 1, 0 );
 
         public TheQuestForm()
         {
             InitializeComponent();
-            game = new Game( new Rectangle( 78, 57, 420, 155 ) );
+            game = new Game( new MyRect( 100, 60, 650, 260 ) );
 
         }
 
         private void UpdateModel()
         {
             pictureBoxPlayer.Location = game.GetActorPos( game.GamePlayer );
-
+            pictureBoxPlayer.Update();
         }
 
         private void buttonMoveUp_Click( object sender, EventArgs e )

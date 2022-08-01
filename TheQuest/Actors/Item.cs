@@ -13,7 +13,7 @@ namespace TheQuest
         private int curCnt;
         private bool isConsumable;
 
-        public Item(Point pos, int cnt, bool consumable)
+        public Item(PointVec pos, int cnt, bool consumable)
             :
             base(pos)
         {

@@ -3,31 +3,69 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace TheQuest
 {
-    class Vei2
+    class PointVec
     {
-        public int X;
-        public int Y;
+        public Point P;
 
-        public Vei2( int x, int y )
+        public PointVec()
         {
-            X = x;
-            Y = y;
+            P.X = 0;
+            P.Y = 0;
+        }
+        public PointVec( int x, int y )
+        {
+            P.X = x;
+            P.Y = y;
+        }
+        public PointVec(Point p)
+        {
+            P = p;
         }
         
-        public static Vei2 operator +( Vei2 lhs, Vei2 rhs )
+        public static PointVec operator +( PointVec lhs, PointVec rhs )
         {
-            return new Vei2( lhs.X + rhs.X, lhs.Y + rhs.Y );
+            return new PointVec( lhs.P.X + rhs.P.X, lhs.P.Y + rhs.P.Y );
         }
-        public static Vei2 operator -( Vei2 lhs, Vei2 rhs )
+        public static PointVec operator -( PointVec lhs, PointVec rhs )
         {
-            return new Vei2( lhs.X - rhs.X, lhs.Y - rhs.Y );
+            return new PointVec( lhs.P.X - rhs.P.X, lhs.P.Y - rhs.P.Y );
         }
-        public static Vei2 operator *( Vei2 lhs, int rhs )
+        public static PointVec operator *( PointVec lhs, int rhs )
         {
-            return new Vei2( lhs.X * rhs, lhs.Y * rhs);
+            return new PointVec( lhs.P.X * rhs, lhs.P.Y * rhs);
+        }
+        public static PointVec operator /( PointVec lhs, int rhs )
+        {
+            return new PointVec( lhs.P.X / rhs, lhs.P.Y / rhs );
+        }
+        public double GetDistanceSq()
+        {
+            return P.X * P.X + P.Y + P.Y;
+        }
+        public double GetDistance()
+        {
+            return Math.Sqrt( GetDistanceSq() );
+        }
+        public PointVec GetNormalized()
+        {
+            int newX = 0;
+            int newY = 0;
+            int dist = (int)GetDistance();
+            if( dist != 0)
+            {
+
+                newX = P.X / dist;
+                newY = P.Y / dist;
+            }
+            return new PointVec( newX, newY );
+        }
+        public bool IsEqual( PointVec rhs )
+        {
+            return P.X == rhs.P.X && P.Y == rhs.P.Y;
         }
     }
 }
