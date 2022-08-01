@@ -10,24 +10,27 @@ namespace TheQuest
     abstract class Actor
     {
         protected Status status;
-        protected Point curPos;
+        protected Point curTilePos;
 
-        public Actor(Point startPos)
+        public Actor( Point startTilePos )
         {
-            curPos = startPos;
+            curTilePos = startTilePos;
         }
-        public Actor(Status status_in, Point startPos)
+        public Actor( Status status_in, Point startTilePos )
         {
             status = status_in;
-            curPos = startPos;
+            curTilePos = startTilePos;
         }
-
+        public Point GetRealPos(TileMap tileMap)
+        {
+            return tileMap.GetRealPos( curTilePos );
+        }
         virtual public void Move( TileMap tileMap, Point dir )
         {
-            Point nextPos = tileMap.GetNextPos( curPos, dir );
-            if( tileMap.CanMove(nextPos))
+            Point nextPos = tileMap.GetNextPos( curTilePos, dir );
+            if ( tileMap.CanMove( nextPos ) )
             {
-                curPos = nextPos;
+                curTilePos = nextPos;
             }
         }
     }

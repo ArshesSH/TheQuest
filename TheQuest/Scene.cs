@@ -9,24 +9,14 @@ namespace TheQuest
 {
     abstract class Scene
     {
-
-
-        public Scene( int tileRow, int tileCol, int tileSize )
-        {
-            tileMap = new TileMap( tileRow, tileCol, tileSize );
-            player = new Player( new Status( 3, 0, 1 ), new Point( 50, 50 ) );
-        }
-
-        public abstract void Update();
+        public abstract void Update( Game game );
 
     }
 
     class SceneStart : Scene
     {
-        public SceneStart()
-        public override void Update()
+        public override void Update( Game game )
         {
-            
         }
     }
 

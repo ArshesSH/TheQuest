@@ -23,13 +23,38 @@ namespace TheQuest
         public TheQuestForm()
         {
             InitializeComponent();
-            
+            game = new Game( new Rectangle( 78, 57, 420, 155 ) );
+
         }
 
+        private void UpdateModel()
+        {
+            pictureBoxPlayer.Location = game.GetActorPos( game.GamePlayer );
+
+        }
 
         private void buttonMoveUp_Click( object sender, EventArgs e )
         {
+            game.PlayerMove( dirUp );
+            UpdateModel();
+        }
 
+        private void buttonMoveLeft_Click( object sender, EventArgs e )
+        {
+            game.PlayerMove( dirLeft );
+            UpdateModel();
+        }
+
+        private void buttonMoveRight_Click( object sender, EventArgs e )
+        {
+            game.PlayerMove( dirRight );
+            UpdateModel();
+        }
+
+        private void buttonMoveDown_Click( object sender, EventArgs e )
+        {
+            game.PlayerMove( dirDown );
+            UpdateModel();
         }
     }
 }

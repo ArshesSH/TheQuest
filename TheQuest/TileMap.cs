@@ -62,6 +62,10 @@ namespace TheQuest
             }
             return false;
         }
+        public Point GetRealPos(Point tilePos)
+        {
+            return new Point( tilePos.X * tileSize, tilePos.Y * tileSize );
+        }
 
         private int ConvertToIndex( Point pos )
         {

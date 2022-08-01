@@ -119,6 +119,7 @@ namespace TheQuest
             this.buttonMoveLeft.TabIndex = 2;
             this.buttonMoveLeft.Text = "Left";
             this.buttonMoveLeft.UseVisualStyleBackColor = true;
+            this.buttonMoveLeft.Click += new System.EventHandler(this.buttonMoveLeft_Click);
             // 
             // buttonMoveRight
             // 
@@ -128,6 +129,7 @@ namespace TheQuest
             this.buttonMoveRight.TabIndex = 2;
             this.buttonMoveRight.Text = "Right";
             this.buttonMoveRight.UseVisualStyleBackColor = true;
+            this.buttonMoveRight.Click += new System.EventHandler(this.buttonMoveRight_Click);
             // 
             // buttonMoveDown
             // 
@@ -137,6 +139,7 @@ namespace TheQuest
             this.buttonMoveDown.TabIndex = 2;
             this.buttonMoveDown.Text = "Down";
             this.buttonMoveDown.UseVisualStyleBackColor = true;
+            this.buttonMoveDown.Click += new System.EventHandler(this.buttonMoveDown_Click);
             // 
             // buttonAttackDown
             // 
@@ -192,6 +195,7 @@ namespace TheQuest
             this.pictureBoxInventory2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxInventory2.TabIndex = 8;
             this.pictureBoxInventory2.TabStop = false;
+            this.pictureBoxInventory2.Visible = false;
             // 
             // tableLayoutPanelStatus
             // 
@@ -353,6 +357,7 @@ namespace TheQuest
             this.pictureBoxInventory3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxInventory3.TabIndex = 12;
             this.pictureBoxInventory3.TabStop = false;
+            this.pictureBoxInventory3.Visible = false;
             // 
             // pictureBoxInventory4
             // 
@@ -363,6 +368,7 @@ namespace TheQuest
             this.pictureBoxInventory4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxInventory4.TabIndex = 11;
             this.pictureBoxInventory4.TabStop = false;
+            this.pictureBoxInventory4.Visible = false;
             // 
             // pictureBoxInventory1
             // 
@@ -374,6 +380,7 @@ namespace TheQuest
             this.pictureBoxInventory1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxInventory1.TabIndex = 10;
             this.pictureBoxInventory1.TabStop = false;
+            this.pictureBoxInventory1.Visible = false;
             // 
             // pictureBoxInventory5
             // 
@@ -384,6 +391,7 @@ namespace TheQuest
             this.pictureBoxInventory5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxInventory5.TabIndex = 9;
             this.pictureBoxInventory5.TabStop = false;
+            this.pictureBoxInventory5.Visible = false;
             // 
             // pictureBoxPlayer
             // 
@@ -395,7 +403,6 @@ namespace TheQuest
             this.pictureBoxPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxPlayer.TabIndex = 11;
             this.pictureBoxPlayer.TabStop = false;
-            this.pictureBoxPlayer.Visible = false;
             // 
             // pictureBoxSword
             // 

@@ -20,7 +20,7 @@ namespace TheQuest
         new virtual public void Move( TileMap tileMap, Point dir )
         { 
 
-            if( !tileMap.FindAround(curPos, range, TileMap.Tile.Player ))
+            if( !tileMap.FindAround(curTilePos, range, TileMap.Tile.Player ))
             {
                 base.Move( tileMap, dir );
             }

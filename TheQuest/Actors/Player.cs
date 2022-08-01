@@ -17,7 +17,7 @@ namespace TheQuest
         public override void Move( TileMap tileMap, Point dir )
         {
             base.Move( tileMap , dir );
-            if ( tileMap.IsTileStateAt( curPos, TileMap.Tile.Item ) ) 
+            if ( tileMap.IsTileStateAt( curTilePos, TileMap.Tile.Item ) ) 
             {
 
             }
