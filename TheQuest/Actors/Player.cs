@@ -18,15 +18,15 @@ namespace TheQuest
         //        foreach ()
         //    }
         //}
-        public Player( Status status, PointVec pos )
+        public Player( Game game, Status status, PointVec pos )
             :
-            base( status, pos )
+            base( game, status, pos )
         {}
 
 
-        new public void Move(PointVec dir, MyRect screenRect)
+        new public void Move(PointVec dir)
         {
-            base.Move( dir, screenRect );
+            base.Move( dir );
         }
     }
 }

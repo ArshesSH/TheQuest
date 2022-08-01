@@ -11,6 +11,60 @@ namespace TheQuest
     {
         public Point P;
 
+        public static readonly PointVec DirUp = new PointVec( 0, -1 );
+        public static readonly PointVec DirDown = new PointVec( 0, 1 );
+        public static readonly PointVec DirLeft = new PointVec( -1, 0 );
+        public static readonly PointVec DirRight = new PointVec( 1, 0 );
+
+        public enum Direction
+        {
+            Up,
+            Down,
+            Left,
+            Right,
+            Count
+        }
+
+        public static PointVec GetDirection( Direction dir )
+        {
+            PointVec direction;
+            switch (dir)
+            {
+                case Direction.Up:
+                {
+                    direction = DirUp;
+                    break;
+                }
+                case Direction.Down:
+                {
+                    direction = DirDown;
+                    break;
+                }
+                case Direction.Left:
+                {
+                    direction = DirLeft;
+                    break;
+                }
+                case Direction.Right:
+                {
+                    direction = DirRight;
+                    break;
+                }
+                default:
+                {
+                    direction = new PointVec();
+                    break;
+                }
+            }
+            return direction;
+        }
+
+        public static PointVec GetRandomDir( Random random )
+        {
+            Direction dir = (Direction)random.Next( (int)Direction.Up, (int)Direction.Count );
+            return GetDirection( dir );
+        }
+
         public PointVec()
         {
             P.X = 0;

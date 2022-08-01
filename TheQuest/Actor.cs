@@ -11,25 +11,28 @@ namespace TheQuest
     {
         protected PointVec pos;
         protected Status status;
+        protected Game game;
         
-        public Point Pos
+        public PointVec Pos
         {
-            get { return pos.P; }
+            get { return pos; }
         }
-        public Actor( PointVec startPos )
+        public Actor( Game game, PointVec startPos )
         {
+            this.game = game;
             pos = startPos;
         }
-        public Actor( Status status, PointVec startPos)
+        public Actor( Game game, Status status, PointVec startPos)
         {
+            this.game = game;
             this.status = status;
             pos = startPos;
         }
 
-        public void Move( PointVec dir, MyRect screenRect )
+        public void Move( PointVec dir )
         {
             PointVec nextPos = pos + dir * status.Speed;
-            if ( screenRect.IsContains( nextPos.P ) )
+            if ( game.ScreenRect.IsContains( nextPos.P ) )
             {
                 pos = nextPos;
             }

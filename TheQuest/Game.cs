@@ -10,16 +10,15 @@ namespace TheQuest
     class Game
     {
         private MyRect screenRect;
+
         private Player player;
-        public Player GamePlayer
-        {
-            get { return player; }
-        }
+        public MyRect ScreenRect { get { return screenRect; } }
+        public Player GamePlayer { get { return player; } }
 
         public Game( MyRect rect )
         {
             screenRect = rect;
-            player = new Player( new Status( 3, 0, 50, 0 ), new PointVec( 100, 60 ) );
+            player = new Player( this, new Status( 3, 0, 50, 0 ), new PointVec( 100, 60 ) );
         }
 
         public void UpdateModel()
@@ -28,7 +27,7 @@ namespace TheQuest
         }
         public void PlayerMove(PointVec dir)
         {
-            player.Move( dir, screenRect );
+            player.Move( dir );
         }
         public void PlayerAttack(PointVec dir)
         {
@@ -37,7 +36,7 @@ namespace TheQuest
 
         public Point GetActorPos(Actor actor)
         {
-            return actor.Pos;
+            return actor.Pos.P;
         }
 
     }

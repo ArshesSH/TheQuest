@@ -13,9 +13,9 @@ namespace TheQuest
         private int curCnt;
         private bool isConsumable;
 
-        public Item(PointVec pos, int cnt, bool consumable)
+        public Item( Game game, PointVec pos, int cnt, bool consumable)
             :
-            base(pos)
+            base(game, pos)
         {
             maxCnt = cnt;
             curCnt = maxCnt;
