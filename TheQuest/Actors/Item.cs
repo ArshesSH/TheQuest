@@ -12,32 +12,37 @@ namespace TheQuest
         private readonly int maxCnt;
         private int curCnt;
         private bool isConsumable;
-
-        public Item( Game game, PointVec pos, int cnt, bool consumable)
+        private bool isPickedUp;
+        public bool IsPickedUp { get { return isPickedUp; } }
+        public Item( Game game, Status status, PointVec pos, int cnt, bool consumable)
             :
-            base(game, pos)
+            base(game, status, pos)
         {
             maxCnt = cnt;
             curCnt = maxCnt;
             isConsumable = consumable;
+            isPickedUp = false;
         }
-
-        public void UseItem()
+        public void PickUp()
+        {
+            isPickedUp = true;
+        }
+        public void Use( PointVec dir, Random random )
         {
             if( isConsumable)
             {
                 if( curCnt < 0)
                 {
-                    ItemEffect();
+                    Effect(dir, random);
                     curCnt--;
                 }
             }
             else
             {
-                ItemEffect();
+                Effect(dir, random);
             }
         }
 
-        public abstract void ItemEffect();
+        public abstract void Effect( PointVec dir, Random random );
     }
 }

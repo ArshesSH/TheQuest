@@ -23,6 +23,10 @@ namespace TheQuest
             base( game, status, pos )
         {}
 
+        public void Attack(PointVec dir, Random random)
+        {
+
+        }
 
         new public void Move(PointVec dir)
         {

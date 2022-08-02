@@ -49,16 +49,5 @@ namespace TheQuest
         {
             return pos.GetDistanceSq() <= distanceSq;
         }
-        public void Attack(PointVec dir, Actor target, Random random )
-        {
-            PointVec targetDir = target.pos - pos;
-            if( IsNearby(target.pos, status.Range * status.Range ) )
-            {
-                if ( dir.IsEqual( targetDir.GetNormalized() ) ) 
-                {
-                    target.Damaged( status.Damage, random );
-                }
-            }
-        }
     }
 }

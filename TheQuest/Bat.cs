@@ -33,7 +33,7 @@ namespace TheQuest
 
             if ( IsNearby( game.GamePlayer.Pos, status.Range ) )
             {
-                Attack( playerDir, game.GamePlayer, random );
+                game.GamePlayer.Damaged( status.Damage, random );
             }
         }
     }

@@ -64,6 +64,8 @@
     <Compile Include="Scene.cs" />
     <Compile Include="Actors\Status.cs" />
     <Compile Include="PointVec.cs" />
+    <Compile Include="Sword.cs" />
+    <Compile Include="Weapon.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

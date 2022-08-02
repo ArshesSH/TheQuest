@@ -15,8 +15,6 @@ namespace TheQuest
         private Game game;
         private Random random = new Random();
 
-
-
         public TheQuestForm()
         {
             InitializeComponent();
@@ -32,25 +30,25 @@ namespace TheQuest
 
         private void buttonMoveUp_Click( object sender, EventArgs e )
         {
-            game.PlayerMove( PointVec.DirUp );
+            game.PlayerMove( PointVec.DirUp, random );
             UpdateModel();
         }
 
         private void buttonMoveLeft_Click( object sender, EventArgs e )
         {
-            game.PlayerMove( PointVec.DirLeft );
+            game.PlayerMove( PointVec.DirLeft, random );
             UpdateModel();
         }
 
         private void buttonMoveRight_Click( object sender, EventArgs e )
         {
-            game.PlayerMove( PointVec.DirRight );
+            game.PlayerMove( PointVec.DirRight, random );
             UpdateModel();
         }
 
         private void buttonMoveDown_Click( object sender, EventArgs e )
         {
-            game.PlayerMove( PointVec.DirDown );
+            game.PlayerMove( PointVec.DirDown, random );
             UpdateModel();
         }
     }
