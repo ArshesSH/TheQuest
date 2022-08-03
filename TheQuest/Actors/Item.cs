@@ -23,6 +23,7 @@ namespace TheQuest
             isConsumable = consumable;
             isPickedUp = false;
         }
+        public abstract string Name { get; }
         public void PickUp()
         {
             isPickedUp = true;

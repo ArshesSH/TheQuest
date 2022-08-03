@@ -18,8 +18,15 @@ namespace TheQuest
         public TheQuestForm()
         {
             InitializeComponent();
-            game = new Game( new MyRect( 100, 60, 650, 260 ) );
+            Load += new EventHandler(Form1_Load);
+        }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            game = new Game(new MyRect(100, 60, 650, 260));
+
+            game.NewLevel(random);
+            UpdateModel();
         }
 
         private void UpdateModel()

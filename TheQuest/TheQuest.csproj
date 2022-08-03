@@ -49,6 +49,7 @@
     <Compile Include="Actor.cs" />
     <Compile Include="Actors\Enemy.cs" />
     <Compile Include="Bat.cs" />
+    <Compile Include="Bow.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

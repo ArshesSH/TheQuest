@@ -12,7 +12,6 @@ namespace TheQuest
             :
             base( game, status, pos, cnt, consumable )
         { }
-        public abstract string Name { get; }
 
         protected bool DamageEnemy( PointVec dir, int radius, int damage, Random random )
         {

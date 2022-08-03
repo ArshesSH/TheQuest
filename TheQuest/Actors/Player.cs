@@ -9,15 +9,20 @@ namespace TheQuest
 {
     class Player : Actor
     {
-        public List<Item> Inventory = new List<Item>();
-        //public List<string> Weapons
-        //{
-        //    get
-        //    {
-        //        List<string> names = new List<string>();
-        //        foreach ()
-        //    }
-        //}
+        private Item equippedItem;
+        private List<Item> inventory = new List<Item>();
+        public List<string> Items
+        {
+            get
+            {
+                List<string> names = new List<string>();
+                foreach (Item item in inventory)
+                {
+                    names.Add(item.Name);
+                }
+                return names;
+            }
+        }
         public Player( Game game, Status status, PointVec pos )
             :
             base( game, status, pos )
@@ -25,12 +30,33 @@ namespace TheQuest
 
         public void Attack(PointVec dir, Random random)
         {
-
+            if( equippedItem != null )
+            {
+                equippedItem.Use(dir, random);
+            }
         }
 
         new public void Move(PointVec dir)
         {
             base.Move( dir );
+            if( !game.ItemInRoom.IsPickedUp )
+            {
+                if(game.ItemInRoom.Pos.IsEqual(pos))
+                {
+                    game.ItemInRoom.PickUp();
+                }
+            }
+        }
+
+        public void Equip(string weaponName)
+        {
+            foreach(Item item in inventory)
+            {
+                if(item.Name == weaponName)
+                {
+                    equippedItem = item;
+                }
+            }
         }
     }
 }
