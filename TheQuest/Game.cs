@@ -16,11 +16,12 @@ namespace TheQuest
         public Player GamePlayer { get { return player; } }
         public List<Enemy> Enemies;
         public Item ItemInRoom;
+        public readonly int TileSize = 50;
 
         public Game( MyRect rect )
         {
             screenRect = rect;
-            player = new Player( this, new Status( 3, 0, 50, 0 ), new PointVec( 100, 60 ) );
+            player = new Player( this, new Status( 3, 0, TileSize, 0 ), new PointVec( 100, 60 ) );
         }
 
         public void UpdateEnemies(Random random)
@@ -45,8 +46,8 @@ namespace TheQuest
         }
         private PointVec GetRandomLocation(Random random)
         {
-            return new PointVec(screenRect.Rect.Left + random.Next(screenRect.Rect.Right / 10 - screenRect.Rect.Left / 10) * 10,
-                screenRect.Rect.Top + random.Next(screenRect.Rect.Bottom / 10 - screenRect.Rect.Top / 10) * 10);
+            return new PointVec( screenRect.Rect.Left + random.Next( screenRect.Rect.Right / TileSize - screenRect.Rect.Left / TileSize ) * TileSize,
+                screenRect.Rect.Top + random.Next( screenRect.Rect.Bottom / TileSize - screenRect.Rect.Top / TileSize ) * TileSize );
         }
         public void NewLevel(Random random)
         {

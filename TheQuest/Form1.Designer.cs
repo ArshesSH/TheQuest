@@ -42,14 +42,14 @@ namespace TheQuest
             this.labelAttack = new System.Windows.Forms.Label();
             this.pictureBoxInventory2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelStatus = new System.Windows.Forms.TableLayoutPanel();
-            this.labelEnemyStatus3 = new System.Windows.Forms.Label();
-            this.labelEnemyHitPoint3 = new System.Windows.Forms.Label();
+            this.labelGhoul = new System.Windows.Forms.Label();
+            this.labelGhoulHP = new System.Windows.Forms.Label();
             this.labelPlayerHitPoint = new System.Windows.Forms.Label();
             this.labelPlayerStatus = new System.Windows.Forms.Label();
-            this.labelEnemyStatus1 = new System.Windows.Forms.Label();
-            this.labelEnemyStatus2 = new System.Windows.Forms.Label();
-            this.labelEnemyHitPoint1 = new System.Windows.Forms.Label();
-            this.labelEnemyHitPoint2 = new System.Windows.Forms.Label();
+            this.labelBat = new System.Windows.Forms.Label();
+            this.labelGhost = new System.Windows.Forms.Label();
+            this.labelBatHP = new System.Windows.Forms.Label();
+            this.labelGhostHP = new System.Windows.Forms.Label();
             this.tableLayoutPanelInventory = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBoxInventory3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxInventory4 = new System.Windows.Forms.PictureBox();
@@ -69,6 +69,8 @@ namespace TheQuest
             this.pictureBoxQuiver = new System.Windows.Forms.PictureBox();
             this.pictureBoxShield = new System.Windows.Forms.PictureBox();
             this.pictureBoxWizard = new System.Windows.Forms.PictureBox();
+            this.labelWizard = new System.Windows.Forms.Label();
+            this.labelWizardHP = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory2)).BeginInit();
             this.tableLayoutPanelStatus.SuspendLayout();
             this.tableLayoutPanelInventory.SuspendLayout();
@@ -204,49 +206,52 @@ namespace TheQuest
             this.tableLayoutPanelStatus.ColumnCount = 2;
             this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.4908F));
             this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.5092F));
-            this.tableLayoutPanelStatus.Controls.Add(this.labelEnemyStatus3, 0, 3);
-            this.tableLayoutPanelStatus.Controls.Add(this.labelEnemyHitPoint3, 0, 3);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelWizardHP, 1, 4);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelWizard, 0, 4);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelGhoul, 0, 3);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelGhoulHP, 0, 3);
             this.tableLayoutPanelStatus.Controls.Add(this.labelPlayerHitPoint, 1, 0);
             this.tableLayoutPanelStatus.Controls.Add(this.labelPlayerStatus, 0, 0);
-            this.tableLayoutPanelStatus.Controls.Add(this.labelEnemyStatus1, 0, 1);
-            this.tableLayoutPanelStatus.Controls.Add(this.labelEnemyStatus2, 0, 2);
-            this.tableLayoutPanelStatus.Controls.Add(this.labelEnemyHitPoint1, 1, 1);
-            this.tableLayoutPanelStatus.Controls.Add(this.labelEnemyHitPoint2, 1, 2);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelBat, 0, 1);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelGhost, 0, 2);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelBatHP, 1, 1);
+            this.tableLayoutPanelStatus.Controls.Add(this.labelGhostHP, 1, 2);
             this.tableLayoutPanelStatus.Location = new System.Drawing.Point(944, 366);
             this.tableLayoutPanelStatus.Name = "tableLayoutPanelStatus";
-            this.tableLayoutPanelStatus.RowCount = 4;
+            this.tableLayoutPanelStatus.RowCount = 5;
             this.tableLayoutPanelStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelStatus.Size = new System.Drawing.Size(179, 120);
             this.tableLayoutPanelStatus.TabIndex = 9;
             // 
-            // labelEnemyStatus3
+            // labelGhoul
             // 
-            this.labelEnemyStatus3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelGhoul.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEnemyStatus3.AutoSize = true;
-            this.labelEnemyStatus3.Location = new System.Drawing.Point(4, 88);
-            this.labelEnemyStatus3.Name = "labelEnemyStatus3";
-            this.labelEnemyStatus3.Size = new System.Drawing.Size(65, 31);
-            this.labelEnemyStatus3.TabIndex = 7;
-            this.labelEnemyStatus3.Text = "Enemy3";
-            this.labelEnemyStatus3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelGhoul.AutoSize = true;
+            this.labelGhoul.Location = new System.Drawing.Point(4, 73);
+            this.labelGhoul.Name = "labelGhoul";
+            this.labelGhoul.Size = new System.Drawing.Size(65, 23);
+            this.labelGhoul.TabIndex = 7;
+            this.labelGhoul.Text = "Ghoul";
+            this.labelGhoul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelEnemyHitPoint3
+            // labelGhoulHP
             // 
-            this.labelEnemyHitPoint3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelGhoulHP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEnemyHitPoint3.AutoSize = true;
-            this.labelEnemyHitPoint3.Location = new System.Drawing.Point(76, 88);
-            this.labelEnemyHitPoint3.Name = "labelEnemyHitPoint3";
-            this.labelEnemyHitPoint3.Size = new System.Drawing.Size(99, 31);
-            this.labelEnemyHitPoint3.TabIndex = 6;
-            this.labelEnemyHitPoint3.Text = "enemyHitPoint3";
-            this.labelEnemyHitPoint3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelGhoulHP.AutoSize = true;
+            this.labelGhoulHP.Location = new System.Drawing.Point(76, 73);
+            this.labelGhoulHP.Name = "labelGhoulHP";
+            this.labelGhoulHP.Size = new System.Drawing.Size(99, 23);
+            this.labelGhoulHP.TabIndex = 6;
+            this.labelGhoulHP.Text = "enemyHitPoint3";
+            this.labelGhoulHP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelPlayerHitPoint
             // 
@@ -256,7 +261,7 @@ namespace TheQuest
             this.labelPlayerHitPoint.AutoSize = true;
             this.labelPlayerHitPoint.Location = new System.Drawing.Point(76, 1);
             this.labelPlayerHitPoint.Name = "labelPlayerHitPoint";
-            this.labelPlayerHitPoint.Size = new System.Drawing.Size(99, 28);
+            this.labelPlayerHitPoint.Size = new System.Drawing.Size(99, 23);
             this.labelPlayerHitPoint.TabIndex = 1;
             this.labelPlayerHitPoint.Text = "playerHitPoint";
             this.labelPlayerHitPoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -269,62 +274,62 @@ namespace TheQuest
             this.labelPlayerStatus.AutoSize = true;
             this.labelPlayerStatus.Location = new System.Drawing.Point(4, 1);
             this.labelPlayerStatus.Name = "labelPlayerStatus";
-            this.labelPlayerStatus.Size = new System.Drawing.Size(65, 28);
+            this.labelPlayerStatus.Size = new System.Drawing.Size(65, 23);
             this.labelPlayerStatus.TabIndex = 0;
             this.labelPlayerStatus.Text = "Player";
             this.labelPlayerStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelEnemyStatus1
+            // labelBat
             // 
-            this.labelEnemyStatus1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelBat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEnemyStatus1.AutoSize = true;
-            this.labelEnemyStatus1.Location = new System.Drawing.Point(4, 30);
-            this.labelEnemyStatus1.Name = "labelEnemyStatus1";
-            this.labelEnemyStatus1.Size = new System.Drawing.Size(65, 28);
-            this.labelEnemyStatus1.TabIndex = 3;
-            this.labelEnemyStatus1.Text = "Enemy1";
-            this.labelEnemyStatus1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelBat.AutoSize = true;
+            this.labelBat.Location = new System.Drawing.Point(4, 25);
+            this.labelBat.Name = "labelBat";
+            this.labelBat.Size = new System.Drawing.Size(65, 23);
+            this.labelBat.TabIndex = 3;
+            this.labelBat.Text = "Bat";
+            this.labelBat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelEnemyStatus2
+            // labelGhost
             // 
-            this.labelEnemyStatus2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelGhost.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEnemyStatus2.AutoSize = true;
-            this.labelEnemyStatus2.Location = new System.Drawing.Point(4, 59);
-            this.labelEnemyStatus2.Name = "labelEnemyStatus2";
-            this.labelEnemyStatus2.Size = new System.Drawing.Size(65, 28);
-            this.labelEnemyStatus2.TabIndex = 5;
-            this.labelEnemyStatus2.Text = "Enemy2";
-            this.labelEnemyStatus2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelGhost.AutoSize = true;
+            this.labelGhost.Location = new System.Drawing.Point(4, 49);
+            this.labelGhost.Name = "labelGhost";
+            this.labelGhost.Size = new System.Drawing.Size(65, 23);
+            this.labelGhost.TabIndex = 5;
+            this.labelGhost.Text = "Ghost";
+            this.labelGhost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelEnemyHitPoint1
+            // labelBatHP
             // 
-            this.labelEnemyHitPoint1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelBatHP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEnemyHitPoint1.AutoSize = true;
-            this.labelEnemyHitPoint1.Location = new System.Drawing.Point(76, 30);
-            this.labelEnemyHitPoint1.Name = "labelEnemyHitPoint1";
-            this.labelEnemyHitPoint1.Size = new System.Drawing.Size(99, 28);
-            this.labelEnemyHitPoint1.TabIndex = 4;
-            this.labelEnemyHitPoint1.Text = "enemyHitPoint1";
-            this.labelEnemyHitPoint1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelBatHP.AutoSize = true;
+            this.labelBatHP.Location = new System.Drawing.Point(76, 25);
+            this.labelBatHP.Name = "labelBatHP";
+            this.labelBatHP.Size = new System.Drawing.Size(99, 23);
+            this.labelBatHP.TabIndex = 4;
+            this.labelBatHP.Text = "enemyHitPoint1";
+            this.labelBatHP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelEnemyHitPoint2
+            // labelGhostHP
             // 
-            this.labelEnemyHitPoint2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelGhostHP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEnemyHitPoint2.AutoSize = true;
-            this.labelEnemyHitPoint2.Location = new System.Drawing.Point(76, 59);
-            this.labelEnemyHitPoint2.Name = "labelEnemyHitPoint2";
-            this.labelEnemyHitPoint2.Size = new System.Drawing.Size(99, 28);
-            this.labelEnemyHitPoint2.TabIndex = 2;
-            this.labelEnemyHitPoint2.Text = "enemyHitPoint2";
-            this.labelEnemyHitPoint2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelGhostHP.AutoSize = true;
+            this.labelGhostHP.Location = new System.Drawing.Point(76, 49);
+            this.labelGhostHP.Name = "labelGhostHP";
+            this.labelGhostHP.Size = new System.Drawing.Size(99, 23);
+            this.labelGhostHP.TabIndex = 2;
+            this.labelGhostHP.Text = "enemyHitPoint2";
+            this.labelGhostHP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanelInventory
             // 
@@ -560,6 +565,32 @@ namespace TheQuest
             this.pictureBoxWizard.TabStop = false;
             this.pictureBoxWizard.Visible = false;
             // 
+            // labelWizard
+            // 
+            this.labelWizard.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWizard.AutoSize = true;
+            this.labelWizard.Location = new System.Drawing.Point(4, 97);
+            this.labelWizard.Name = "labelWizard";
+            this.labelWizard.Size = new System.Drawing.Size(65, 22);
+            this.labelWizard.TabIndex = 8;
+            this.labelWizard.Text = "Wizard";
+            this.labelWizard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelWizardHP
+            // 
+            this.labelWizardHP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWizardHP.AutoSize = true;
+            this.labelWizardHP.Location = new System.Drawing.Point(76, 97);
+            this.labelWizardHP.Name = "labelWizardHP";
+            this.labelWizardHP.Size = new System.Drawing.Size(99, 22);
+            this.labelWizardHP.TabIndex = 9;
+            this.labelWizardHP.Text = "enemyHitPoint3";
+            this.labelWizardHP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // TheQuestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -595,6 +626,7 @@ namespace TheQuest
             this.Controls.Add(this.labelMove);
             this.Name = "TheQuestForm";
             this.Text = "TheQuest";
+            this.Load += new System.EventHandler(this.TheQuestForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory2)).EndInit();
             this.tableLayoutPanelStatus.ResumeLayout(false);
             this.tableLayoutPanelStatus.PerformLayout();
@@ -637,12 +669,12 @@ namespace TheQuest
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelStatus;
         private System.Windows.Forms.Label labelPlayerHitPoint;
         private System.Windows.Forms.Label labelPlayerStatus;
-        private System.Windows.Forms.Label labelEnemyStatus3;
-        private System.Windows.Forms.Label labelEnemyHitPoint3;
-        private System.Windows.Forms.Label labelEnemyStatus1;
-        private System.Windows.Forms.Label labelEnemyStatus2;
-        private System.Windows.Forms.Label labelEnemyHitPoint1;
-        private System.Windows.Forms.Label labelEnemyHitPoint2;
+        private System.Windows.Forms.Label labelGhoul;
+        private System.Windows.Forms.Label labelGhoulHP;
+        private System.Windows.Forms.Label labelBat;
+        private System.Windows.Forms.Label labelGhost;
+        private System.Windows.Forms.Label labelBatHP;
+        private System.Windows.Forms.Label labelGhostHP;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelInventory;
         private System.Windows.Forms.PictureBox pictureBoxInventory3;
         private System.Windows.Forms.PictureBox pictureBoxInventory4;
@@ -662,6 +694,8 @@ namespace TheQuest
         private System.Windows.Forms.PictureBox pictureBoxQuiver;
         private System.Windows.Forms.PictureBox pictureBoxShield;
         private System.Windows.Forms.PictureBox pictureBoxWizard;
+        private System.Windows.Forms.Label labelWizardHP;
+        private System.Windows.Forms.Label labelWizard;
     }
 }
 

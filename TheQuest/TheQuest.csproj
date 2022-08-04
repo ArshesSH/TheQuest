@@ -59,6 +59,8 @@
     <Compile Include="Game.cs" />
     <Compile Include="Actors\Item.cs" />
     <Compile Include="Actors\Player.cs" />
+    <Compile Include="Ghost.cs" />
+    <Compile Include="Ghoul.cs" />
     <Compile Include="MyRect.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +69,7 @@
     <Compile Include="PointVec.cs" />
     <Compile Include="Sword.cs" />
     <Compile Include="Weapon.cs" />
+    <Compile Include="Wizard.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

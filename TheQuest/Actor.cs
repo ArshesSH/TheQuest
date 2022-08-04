@@ -12,7 +12,8 @@ namespace TheQuest
         protected PointVec pos;
         protected Status status;
         protected Game game;
-        
+        public Status ActorStatus { get { return status; } }
+
         public PointVec Pos
         {
             get { return pos; }
