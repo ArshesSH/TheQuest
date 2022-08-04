@@ -41,7 +41,8 @@ namespace TheQuest
             base.Move( dir );
             if( !game.ItemInRoom.IsPickedUp )
             {
-                if((game.ItemInRoom.Pos - pos).GetDistanceSq() <= 20)
+                //if((game.ItemInRoom.Pos - pos).GetDistanceSq() <= 20)
+                if (game.ItemInRoom.Pos.IsEqual(pos))
                 {
                     game.ItemInRoom.PickUp();
                     inventory.Add( game.ItemInRoom );

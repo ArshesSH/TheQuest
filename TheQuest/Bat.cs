@@ -17,7 +17,7 @@ namespace TheQuest
 
         public Bat(Game game, PointVec pos)
             :
-            base(game, new Status(maxHP, damage, speed * game.TileSize, attackRange ), pos, searchRange )
+            base(game, new Status(maxHP, damage, speed * game.TileSize, attackRange * game.TileSize ), pos, searchRange * game.TileSize)
         { }
 
         public override void Move(Random random)
@@ -32,7 +32,7 @@ namespace TheQuest
                 base.Move( playerDir );
             }
 
-            if ( IsNearby( game.GamePlayer.Pos, status.Range ) )
+            if ( IsNearby( (pos - game.GamePlayer.Pos), status.Range ) )
             {
                 game.GamePlayer.Damaged( status.Damage, random );
             }

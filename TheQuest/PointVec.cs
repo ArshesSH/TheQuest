@@ -96,19 +96,19 @@ namespace TheQuest
         {
             return new PointVec( lhs.P.X / rhs, lhs.P.Y / rhs );
         }
-        public double GetDistanceSq()
+        public double GetLengthSq()
         {
-            return P.X * P.X + P.Y + P.Y;
+            return P.X * P.X + P.Y * P.Y;
         }
-        public double GetDistance()
+        public double GetLength()
         {
-            return Math.Sqrt( GetDistanceSq() );
+            return Math.Sqrt(GetLengthSq() );
         }
         public PointVec GetNormalized()
         {
             int newX = 0;
             int newY = 0;
-            int dist = (int)GetDistance();
+            int dist = (int)GetLength();
             if( dist != 0)
             {
 

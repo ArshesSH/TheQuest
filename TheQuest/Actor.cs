@@ -46,9 +46,9 @@ namespace TheQuest
         {
             status.IncreaseHealth( random.Next( 1, health ) );
         }
-        public bool IsNearby(PointVec pos, int distanceSq)
+        public bool IsNearby(PointVec pos, int distance)
         {
-            return pos.GetDistanceSq() <= distanceSq;
+            return pos.GetLength() <= distance;
         }
     }
 }
