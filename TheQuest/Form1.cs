@@ -36,13 +36,13 @@ namespace TheQuest
             bool showWizard = false;
             int enemiesShown = 0;
 
-            foreach(Enemy enemy in game.Enemies)
+            foreach ( Enemy enemy in game.Enemies )
             {
-                if( enemy is Bat)
+                if ( enemy is Bat )
                 {
                     pictureBoxBat.Location = game.GetActorPos( enemy );
                     labelBatHP.Text = enemy.ActorStatus.HitPoint.ToString();
-                    if(enemy.ActorStatus.HitPoint > 0)
+                    if ( enemy.ActorStatus.HitPoint > 0 )
                     {
                         showBat = true;
                         enemiesShown++;
@@ -80,7 +80,7 @@ namespace TheQuest
                 }
             }
 
-            if(showBat)
+            if ( showBat )
             {
                 pictureBoxBat.Visible = true;
             }
@@ -133,7 +133,7 @@ namespace TheQuest
             pictureBoxShield.Visible = false;
 
             Control itemControl = null;
-            switch(game.ItemInRoom.Name)
+            switch ( game.ItemInRoom.Name )
             {
                 case "Sword":
                     {
@@ -183,7 +183,7 @@ namespace TheQuest
             }
 
             itemControl.Location = game.GetActorPos( game.ItemInRoom );
-            if(game.ItemInRoom.IsPickedUp)
+            if ( game.ItemInRoom.IsPickedUp )
             {
                 itemControl.Visible = false;
             }
@@ -192,7 +192,17 @@ namespace TheQuest
                 itemControl.Visible = true;
             }
 
-            if(game.GamePlayer.ActorStatus.HitPoint <= 0)
+            Control inventoryControl = null;
+            if (game.CheckPlayerInventory("Sword"))
+            {
+                inventoryControl = pictureBoxSword;
+            }
+            if ( tableLayoutPanelInventory.Controls.Count == 0 )
+            {
+                tableLayoutPanelInventory.Controls.Add( inventoryControl );
+            }
+
+            if (game.GamePlayer.ActorStatus.HitPoint <= 0)
             {
                 MessageBox.Show( "유다희" );
                 Application.Exit();
