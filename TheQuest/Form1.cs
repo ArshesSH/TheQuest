@@ -202,7 +202,7 @@ namespace TheQuest
 
             if (game.GamePlayer.ActorStatus.HitPoint <= 0)
             {
-                MessageBox.Show( "유다희" );
+                MessageBox.Show( "You Died" );
                 Application.Exit();
             }
             if(enemiesShown < 1)
