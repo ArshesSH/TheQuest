@@ -18,6 +18,7 @@ namespace TheQuest
         public TheQuestForm()
         {
             InitializeComponent();
+
         }
 
         private void UpdateModel()
@@ -192,15 +193,12 @@ namespace TheQuest
                 itemControl.Visible = true;
             }
 
-            Control inventoryControl = null;
             if (game.CheckPlayerInventory("Sword"))
             {
-                inventoryControl = pictureBoxSword;
+                pictureBoxInventory1.Image = pictureBoxSword.Image;
+                pictureBoxInventory1.Visible = true;
             }
-            if ( tableLayoutPanelInventory.Controls.Count == 0 )
-            {
-                tableLayoutPanelInventory.Controls.Add( inventoryControl );
-            }
+                
 
             if (game.GamePlayer.ActorStatus.HitPoint <= 0)
             {
@@ -246,6 +244,8 @@ namespace TheQuest
 
             game.NewLevel( random );
             UpdateModel();
+
+
         }
     }
 }

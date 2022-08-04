@@ -44,6 +44,7 @@ namespace TheQuest
                 if((game.ItemInRoom.Pos - pos).GetDistanceSq() <= 20)
                 {
                     game.ItemInRoom.PickUp();
+                    inventory.Add( game.ItemInRoom );
                 }
             }
         }

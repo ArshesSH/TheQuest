@@ -42,6 +42,8 @@ namespace TheQuest
             this.labelAttack = new System.Windows.Forms.Label();
             this.pictureBoxInventory2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelStatus = new System.Windows.Forms.TableLayoutPanel();
+            this.labelWizardHP = new System.Windows.Forms.Label();
+            this.labelWizard = new System.Windows.Forms.Label();
             this.labelGhoul = new System.Windows.Forms.Label();
             this.labelGhoulHP = new System.Windows.Forms.Label();
             this.labelPlayerHitPoint = new System.Windows.Forms.Label();
@@ -69,8 +71,10 @@ namespace TheQuest
             this.pictureBoxQuiver = new System.Windows.Forms.PictureBox();
             this.pictureBoxShield = new System.Windows.Forms.PictureBox();
             this.pictureBoxWizard = new System.Windows.Forms.PictureBox();
-            this.labelWizard = new System.Windows.Forms.Label();
-            this.labelWizardHP = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory2)).BeginInit();
             this.tableLayoutPanelStatus.SuspendLayout();
             this.tableLayoutPanelInventory.SuspendLayout();
@@ -92,6 +96,10 @@ namespace TheQuest
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuiver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShield)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWizard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // labelMove
@@ -191,7 +199,7 @@ namespace TheQuest
             // pictureBoxInventory2
             // 
             this.pictureBoxInventory2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory2.Image")));
-            this.pictureBoxInventory2.Location = new System.Drawing.Point(79, 3);
+            this.pictureBoxInventory2.Location = new System.Drawing.Point(155, 3);
             this.pictureBoxInventory2.Name = "pictureBoxInventory2";
             this.pictureBoxInventory2.Size = new System.Drawing.Size(70, 70);
             this.pictureBoxInventory2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -226,6 +234,32 @@ namespace TheQuest
             this.tableLayoutPanelStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelStatus.Size = new System.Drawing.Size(179, 120);
             this.tableLayoutPanelStatus.TabIndex = 9;
+            // 
+            // labelWizardHP
+            // 
+            this.labelWizardHP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWizardHP.AutoSize = true;
+            this.labelWizardHP.Location = new System.Drawing.Point(76, 97);
+            this.labelWizardHP.Name = "labelWizardHP";
+            this.labelWizardHP.Size = new System.Drawing.Size(99, 22);
+            this.labelWizardHP.TabIndex = 9;
+            this.labelWizardHP.Text = "enemyHitPoint3";
+            this.labelWizardHP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelWizard
+            // 
+            this.labelWizard.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWizard.AutoSize = true;
+            this.labelWizard.Location = new System.Drawing.Point(4, 97);
+            this.labelWizard.Name = "labelWizard";
+            this.labelWizard.Size = new System.Drawing.Size(65, 22);
+            this.labelWizard.TabIndex = 8;
+            this.labelWizard.Text = "Wizard";
+            this.labelWizard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelGhoul
             // 
@@ -334,29 +368,37 @@ namespace TheQuest
             // tableLayoutPanelInventory
             // 
             this.tableLayoutPanelInventory.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanelInventory.ColumnCount = 5;
+            this.tableLayoutPanelInventory.ColumnCount = 9;
             this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBox4, 0, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBox3, 0, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBox2, 0, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory3, 0, 0);
             this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory4, 0, 0);
             this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory1, 0, 0);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory5, 1, 0);
             this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory2, 0, 0);
-            this.tableLayoutPanelInventory.Location = new System.Drawing.Point(117, 478);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory5, 4, 0);
+            this.tableLayoutPanelInventory.Location = new System.Drawing.Point(107, 478);
             this.tableLayoutPanelInventory.MinimumSize = new System.Drawing.Size(70, 70);
             this.tableLayoutPanelInventory.Name = "tableLayoutPanelInventory";
             this.tableLayoutPanelInventory.RowCount = 1;
             this.tableLayoutPanelInventory.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelInventory.Size = new System.Drawing.Size(400, 80);
+            this.tableLayoutPanelInventory.Size = new System.Drawing.Size(697, 80);
             this.tableLayoutPanelInventory.TabIndex = 10;
             // 
             // pictureBoxInventory3
             // 
             this.pictureBoxInventory3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory3.Image")));
-            this.pictureBoxInventory3.Location = new System.Drawing.Point(155, 3);
+            this.pictureBoxInventory3.Location = new System.Drawing.Point(79, 3);
             this.pictureBoxInventory3.Name = "pictureBoxInventory3";
             this.pictureBoxInventory3.Size = new System.Drawing.Size(70, 70);
             this.pictureBoxInventory3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -367,7 +409,7 @@ namespace TheQuest
             // pictureBoxInventory4
             // 
             this.pictureBoxInventory4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory4.Image")));
-            this.pictureBoxInventory4.Location = new System.Drawing.Point(231, 3);
+            this.pictureBoxInventory4.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxInventory4.Name = "pictureBoxInventory4";
             this.pictureBoxInventory4.Size = new System.Drawing.Size(70, 70);
             this.pictureBoxInventory4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -379,7 +421,7 @@ namespace TheQuest
             // 
             this.pictureBoxInventory1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxInventory1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory1.Image")));
-            this.pictureBoxInventory1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxInventory1.Location = new System.Drawing.Point(231, 3);
             this.pictureBoxInventory1.Name = "pictureBoxInventory1";
             this.pictureBoxInventory1.Size = new System.Drawing.Size(70, 70);
             this.pictureBoxInventory1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -390,9 +432,9 @@ namespace TheQuest
             // pictureBoxInventory5
             // 
             this.pictureBoxInventory5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory5.Image")));
-            this.pictureBoxInventory5.Location = new System.Drawing.Point(307, 3);
+            this.pictureBoxInventory5.Location = new System.Drawing.Point(617, 3);
             this.pictureBoxInventory5.Name = "pictureBoxInventory5";
-            this.pictureBoxInventory5.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory5.Size = new System.Drawing.Size(73, 70);
             this.pictureBoxInventory5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxInventory5.TabIndex = 9;
             this.pictureBoxInventory5.TabStop = false;
@@ -565,31 +607,49 @@ namespace TheQuest
             this.pictureBoxWizard.TabStop = false;
             this.pictureBoxWizard.Visible = false;
             // 
-            // labelWizard
+            // pictureBox1
             // 
-            this.labelWizard.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelWizard.AutoSize = true;
-            this.labelWizard.Location = new System.Drawing.Point(4, 97);
-            this.labelWizard.Name = "labelWizard";
-            this.labelWizard.Size = new System.Drawing.Size(65, 22);
-            this.labelWizard.TabIndex = 8;
-            this.labelWizard.Text = "Wizard";
-            this.labelWizard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(465, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
-            // labelWizardHP
+            // pictureBox2
             // 
-            this.labelWizardHP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelWizardHP.AutoSize = true;
-            this.labelWizardHP.Location = new System.Drawing.Point(76, 97);
-            this.labelWizardHP.Name = "labelWizardHP";
-            this.labelWizardHP.Size = new System.Drawing.Size(99, 22);
-            this.labelWizardHP.TabIndex = 9;
-            this.labelWizardHP.Text = "enemyHitPoint3";
-            this.labelWizardHP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(541, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(307, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(73, 70);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(386, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(73, 70);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Visible = false;
             // 
             // TheQuestForm
             // 
@@ -649,6 +709,10 @@ namespace TheQuest
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuiver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShield)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWizard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -696,6 +760,10 @@ namespace TheQuest
         private System.Windows.Forms.PictureBox pictureBoxWizard;
         private System.Windows.Forms.Label labelWizardHP;
         private System.Windows.Forms.Label labelWizard;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
