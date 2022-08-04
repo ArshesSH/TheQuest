@@ -195,8 +195,8 @@ namespace TheQuest
 
             if (game.CheckPlayerInventory("Sword"))
             {
-                pictureBoxInventory1.Image = pictureBoxSword.Image;
-                pictureBoxInventory1.Visible = true;
+                pictureBoxInventory4.Image = pictureBoxSword.Image;
+                pictureBoxInventory4.Visible = true;
             }
                 
 
@@ -248,5 +248,49 @@ namespace TheQuest
 
         }
 
+        private void pictureBoxInventory1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxInventory2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxInventory3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxInventory4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxInventory5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxInventory6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxInventory7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxInventory8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxInventory9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

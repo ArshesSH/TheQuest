@@ -40,7 +40,7 @@ namespace TheQuest
             this.buttonAttackLeft = new System.Windows.Forms.Button();
             this.buttonAttackUp = new System.Windows.Forms.Button();
             this.labelAttack = new System.Windows.Forms.Label();
-            this.pictureBoxInventory2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory3 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelStatus = new System.Windows.Forms.TableLayoutPanel();
             this.labelWizardHP = new System.Windows.Forms.Label();
             this.labelWizard = new System.Windows.Forms.Label();
@@ -53,14 +53,14 @@ namespace TheQuest
             this.labelBatHP = new System.Windows.Forms.Label();
             this.labelGhostHP = new System.Windows.Forms.Label();
             this.tableLayoutPanelInventory = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxInventory3 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxInventory4 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxInventory1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory6 = new System.Windows.Forms.PictureBox();
             this.pictureBoxInventory5 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory8 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory7 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInventory9 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPlayer = new System.Windows.Forms.PictureBox();
             this.pictureBoxSword = new System.Windows.Forms.PictureBox();
             this.pictureBoxBat = new System.Windows.Forms.PictureBox();
@@ -75,17 +75,17 @@ namespace TheQuest
             this.pictureBoxQuiver = new System.Windows.Forms.PictureBox();
             this.pictureBoxShield = new System.Windows.Forms.PictureBox();
             this.pictureBoxWizard = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory3)).BeginInit();
             this.tableLayoutPanelStatus.SuspendLayout();
             this.tableLayoutPanelInventory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBat)).BeginInit();
@@ -196,16 +196,17 @@ namespace TheQuest
             this.labelAttack.TabIndex = 3;
             this.labelAttack.Text = "Attack";
             // 
-            // pictureBoxInventory2
+            // pictureBoxInventory3
             // 
-            this.pictureBoxInventory2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory2.Image")));
-            this.pictureBoxInventory2.Location = new System.Drawing.Point(155, 3);
-            this.pictureBoxInventory2.Name = "pictureBoxInventory2";
-            this.pictureBoxInventory2.Size = new System.Drawing.Size(70, 70);
-            this.pictureBoxInventory2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxInventory2.TabIndex = 8;
-            this.pictureBoxInventory2.TabStop = false;
-            this.pictureBoxInventory2.Visible = false;
+            this.pictureBoxInventory3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory3.Image")));
+            this.pictureBoxInventory3.Location = new System.Drawing.Point(155, 3);
+            this.pictureBoxInventory3.Name = "pictureBoxInventory3";
+            this.pictureBoxInventory3.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory3.TabIndex = 8;
+            this.pictureBoxInventory3.TabStop = false;
+            this.pictureBoxInventory3.Visible = false;
+            this.pictureBoxInventory3.Click += new System.EventHandler(this.pictureBoxInventory3_Click);
             // 
             // tableLayoutPanelStatus
             // 
@@ -378,15 +379,15 @@ namespace TheQuest
             this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelInventory.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBox4, 0, 0);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBox3, 0, 0);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBox2, 0, 0);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory3, 0, 0);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory4, 0, 0);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory1, 0, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory6, 0, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory5, 0, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory8, 0, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory7, 0, 0);
             this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory2, 0, 0);
-            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory5, 4, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory1, 0, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory4, 0, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory3, 0, 0);
+            this.tableLayoutPanelInventory.Controls.Add(this.pictureBoxInventory9, 4, 0);
             this.tableLayoutPanelInventory.Location = new System.Drawing.Point(107, 478);
             this.tableLayoutPanelInventory.MinimumSize = new System.Drawing.Size(70, 70);
             this.tableLayoutPanelInventory.Name = "tableLayoutPanelInventory";
@@ -395,94 +396,102 @@ namespace TheQuest
             this.tableLayoutPanelInventory.Size = new System.Drawing.Size(697, 80);
             this.tableLayoutPanelInventory.TabIndex = 10;
             // 
-            // pictureBox4
+            // pictureBoxInventory6
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(386, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(73, 70);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Visible = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(307, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(73, 70);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(541, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(465, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            // 
-            // pictureBoxInventory3
-            // 
-            this.pictureBoxInventory3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory3.Image")));
-            this.pictureBoxInventory3.Location = new System.Drawing.Point(79, 3);
-            this.pictureBoxInventory3.Name = "pictureBoxInventory3";
-            this.pictureBoxInventory3.Size = new System.Drawing.Size(70, 70);
-            this.pictureBoxInventory3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxInventory3.TabIndex = 12;
-            this.pictureBoxInventory3.TabStop = false;
-            this.pictureBoxInventory3.Visible = false;
-            // 
-            // pictureBoxInventory4
-            // 
-            this.pictureBoxInventory4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory4.Image")));
-            this.pictureBoxInventory4.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxInventory4.Name = "pictureBoxInventory4";
-            this.pictureBoxInventory4.Size = new System.Drawing.Size(70, 70);
-            this.pictureBoxInventory4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxInventory4.TabIndex = 11;
-            this.pictureBoxInventory4.TabStop = false;
-            this.pictureBoxInventory4.Visible = false;
-            // 
-            // pictureBoxInventory1
-            // 
-            this.pictureBoxInventory1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxInventory1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory1.Image")));
-            this.pictureBoxInventory1.Location = new System.Drawing.Point(231, 3);
-            this.pictureBoxInventory1.Name = "pictureBoxInventory1";
-            this.pictureBoxInventory1.Size = new System.Drawing.Size(70, 70);
-            this.pictureBoxInventory1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxInventory1.TabIndex = 10;
-            this.pictureBoxInventory1.TabStop = false;
-            this.pictureBoxInventory1.Visible = false;
+            this.pictureBoxInventory6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory6.Image")));
+            this.pictureBoxInventory6.Location = new System.Drawing.Point(386, 3);
+            this.pictureBoxInventory6.Name = "pictureBoxInventory6";
+            this.pictureBoxInventory6.Size = new System.Drawing.Size(73, 70);
+            this.pictureBoxInventory6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory6.TabIndex = 16;
+            this.pictureBoxInventory6.TabStop = false;
+            this.pictureBoxInventory6.Visible = false;
+            this.pictureBoxInventory6.Click += new System.EventHandler(this.pictureBoxInventory6_Click);
             // 
             // pictureBoxInventory5
             // 
             this.pictureBoxInventory5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory5.Image")));
-            this.pictureBoxInventory5.Location = new System.Drawing.Point(617, 3);
+            this.pictureBoxInventory5.Location = new System.Drawing.Point(307, 3);
             this.pictureBoxInventory5.Name = "pictureBoxInventory5";
             this.pictureBoxInventory5.Size = new System.Drawing.Size(73, 70);
             this.pictureBoxInventory5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxInventory5.TabIndex = 9;
+            this.pictureBoxInventory5.TabIndex = 15;
             this.pictureBoxInventory5.TabStop = false;
             this.pictureBoxInventory5.Visible = false;
+            this.pictureBoxInventory5.Click += new System.EventHandler(this.pictureBoxInventory5_Click);
+            // 
+            // pictureBoxInventory8
+            // 
+            this.pictureBoxInventory8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory8.Image")));
+            this.pictureBoxInventory8.Location = new System.Drawing.Point(541, 3);
+            this.pictureBoxInventory8.Name = "pictureBoxInventory8";
+            this.pictureBoxInventory8.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory8.TabIndex = 14;
+            this.pictureBoxInventory8.TabStop = false;
+            this.pictureBoxInventory8.Visible = false;
+            this.pictureBoxInventory8.Click += new System.EventHandler(this.pictureBoxInventory8_Click);
+            // 
+            // pictureBoxInventory7
+            // 
+            this.pictureBoxInventory7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory7.Image")));
+            this.pictureBoxInventory7.Location = new System.Drawing.Point(465, 3);
+            this.pictureBoxInventory7.Name = "pictureBoxInventory7";
+            this.pictureBoxInventory7.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory7.TabIndex = 13;
+            this.pictureBoxInventory7.TabStop = false;
+            this.pictureBoxInventory7.Visible = false;
+            this.pictureBoxInventory7.Click += new System.EventHandler(this.pictureBoxInventory7_Click);
+            // 
+            // pictureBoxInventory2
+            // 
+            this.pictureBoxInventory2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory2.Image")));
+            this.pictureBoxInventory2.Location = new System.Drawing.Point(79, 3);
+            this.pictureBoxInventory2.Name = "pictureBoxInventory2";
+            this.pictureBoxInventory2.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory2.TabIndex = 12;
+            this.pictureBoxInventory2.TabStop = false;
+            this.pictureBoxInventory2.Visible = false;
+            this.pictureBoxInventory2.Click += new System.EventHandler(this.pictureBoxInventory2_Click);
+            // 
+            // pictureBoxInventory1
+            // 
+            this.pictureBoxInventory1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory1.Image")));
+            this.pictureBoxInventory1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxInventory1.Name = "pictureBoxInventory1";
+            this.pictureBoxInventory1.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory1.TabIndex = 11;
+            this.pictureBoxInventory1.TabStop = false;
+            this.pictureBoxInventory1.Visible = false;
+            this.pictureBoxInventory1.Click += new System.EventHandler(this.pictureBoxInventory1_Click);
+            // 
+            // pictureBoxInventory4
+            // 
+            this.pictureBoxInventory4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxInventory4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory4.Image")));
+            this.pictureBoxInventory4.Location = new System.Drawing.Point(231, 3);
+            this.pictureBoxInventory4.Name = "pictureBoxInventory4";
+            this.pictureBoxInventory4.Size = new System.Drawing.Size(70, 70);
+            this.pictureBoxInventory4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory4.TabIndex = 10;
+            this.pictureBoxInventory4.TabStop = false;
+            this.pictureBoxInventory4.Visible = false;
+            this.pictureBoxInventory4.Click += new System.EventHandler(this.pictureBoxInventory4_Click);
+            // 
+            // pictureBoxInventory9
+            // 
+            this.pictureBoxInventory9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInventory9.Image")));
+            this.pictureBoxInventory9.Location = new System.Drawing.Point(617, 3);
+            this.pictureBoxInventory9.Name = "pictureBoxInventory9";
+            this.pictureBoxInventory9.Size = new System.Drawing.Size(73, 70);
+            this.pictureBoxInventory9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInventory9.TabIndex = 9;
+            this.pictureBoxInventory9.TabStop = false;
+            this.pictureBoxInventory9.Visible = false;
+            this.pictureBoxInventory9.Click += new System.EventHandler(this.pictureBoxInventory9_Click);
             // 
             // pictureBoxPlayer
             // 
@@ -687,18 +696,18 @@ namespace TheQuest
             this.Name = "TheQuestForm";
             this.Text = "TheQuest";
             this.Load += new System.EventHandler(this.TheQuestForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory3)).EndInit();
             this.tableLayoutPanelStatus.ResumeLayout(false);
             this.tableLayoutPanelStatus.PerformLayout();
             this.tableLayoutPanelInventory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInventory9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBat)).EndInit();
@@ -729,7 +738,7 @@ namespace TheQuest
         private System.Windows.Forms.Button buttonAttackLeft;
         private System.Windows.Forms.Button buttonAttackUp;
         private System.Windows.Forms.Label labelAttack;
-        private System.Windows.Forms.PictureBox pictureBoxInventory2;
+        private System.Windows.Forms.PictureBox pictureBoxInventory3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelStatus;
         private System.Windows.Forms.Label labelPlayerHitPoint;
         private System.Windows.Forms.Label labelPlayerStatus;
@@ -740,10 +749,10 @@ namespace TheQuest
         private System.Windows.Forms.Label labelBatHP;
         private System.Windows.Forms.Label labelGhostHP;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelInventory;
-        private System.Windows.Forms.PictureBox pictureBoxInventory3;
-        private System.Windows.Forms.PictureBox pictureBoxInventory4;
+        private System.Windows.Forms.PictureBox pictureBoxInventory2;
         private System.Windows.Forms.PictureBox pictureBoxInventory1;
-        private System.Windows.Forms.PictureBox pictureBoxInventory5;
+        private System.Windows.Forms.PictureBox pictureBoxInventory4;
+        private System.Windows.Forms.PictureBox pictureBoxInventory9;
         private System.Windows.Forms.PictureBox pictureBoxPlayer;
         private System.Windows.Forms.PictureBox pictureBoxSword;
         private System.Windows.Forms.PictureBox pictureBoxBat;
@@ -760,10 +769,10 @@ namespace TheQuest
         private System.Windows.Forms.PictureBox pictureBoxWizard;
         private System.Windows.Forms.Label labelWizardHP;
         private System.Windows.Forms.Label labelWizard;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxInventory6;
+        private System.Windows.Forms.PictureBox pictureBoxInventory5;
+        private System.Windows.Forms.PictureBox pictureBoxInventory8;
+        private System.Windows.Forms.PictureBox pictureBoxInventory7;
     }
 }
 
