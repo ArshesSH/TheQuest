@@ -12,7 +12,7 @@ namespace TheQuest
     {
         private MyRect screenRect;
         private Player player;
-        private int level = 1;
+        private int level = 0;
         public MyRect ScreenRect { get { return screenRect; } }
         public Player GamePlayer { get { return player; } }
         public List<Enemy> Enemies;

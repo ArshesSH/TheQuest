@@ -14,13 +14,28 @@ namespace TheQuest
     {
         private Game game;
         private Random random = new Random();
-        private List<string> inventoryForms = new List<string>();
+        //private List<string> inventoryForms = new List<string>();
+        private Dictionary<string, PictureBox> inventoryTable = new Dictionary<string, PictureBox>();
         private KeyValuePair<string, PictureBox> curItemPair;
+        private List<PictureBox> inventoryPictures = new List<PictureBox>();
 
         public TheQuestForm()
         {
             InitializeComponent();
+            InitInventoryPicturebox();
+        }
 
+        private void InitInventoryPicturebox()
+        {
+            inventoryPictures.Add( pictureBoxInventory1 );
+            inventoryPictures.Add( pictureBoxInventory2 );
+            inventoryPictures.Add( pictureBoxInventory3 );
+            inventoryPictures.Add( pictureBoxInventory4 );
+            inventoryPictures.Add( pictureBoxInventory5 );
+            inventoryPictures.Add( pictureBoxInventory6 );
+            inventoryPictures.Add( pictureBoxInventory7 );
+            inventoryPictures.Add( pictureBoxInventory8 );
+            inventoryPictures.Add( pictureBoxInventory9 );
         }
 
         private void UpdateModel()
@@ -207,15 +222,36 @@ namespace TheQuest
             {
                 itemControl.Visible = false;
 
-                if( !inventoryForms.Contains(curItemPair.Key) )
+                //if( !inventoryForms.Contains(curItemPair.Key) )
+                //{
+                //    inventoryForms.Add( curItemPair.Key );
+                //    AddToInventoryForm( curItemPair.Value, game.GamePlayer.Items.Count - 1 );
+                //}
+
+                if( !inventoryTable.ContainsKey(curItemPair.Key) )
                 {
-                    inventoryForms.Add( curItemPair.Key );
-                    AddToInventoryForm( curItemPair.Value, game.GamePlayer.Items.Count - 1 );
+                    inventoryTable.Add( curItemPair.Key, curItemPair.Value );
+
+                    int inventoryEndIdx = game.GamePlayer.Items.Count - 1;
+                    inventoryPictures[inventoryEndIdx].Image = curItemPair.Value.Image;
+                    //inventoryPictures[inventoryEndIdx].Visible = true;
                 }
             }
             else
             {
                 itemControl.Visible = true;
+            }
+
+            for( int i = 0; i < inventoryTable.Count; ++i )
+            {
+                if( game.GamePlayer.Items.Contains(inventoryTable.ElementAt(i).Key) )
+                {
+                    inventoryPictures[i].Visible = true;
+                }
+                else
+                {
+                    inventoryPictures[i].Visible = false;
+                }
             }
 
             if( game.GamePlayer.EquippedIdx == -1)
@@ -343,131 +379,81 @@ namespace TheQuest
             UpdateModel();
         }
 
+        public void OnClickInventory(int idx)
+        {
+            for( int i = 0; i < inventoryPictures.Count; ++i )
+            {
+                if( i != idx)
+                {
+                    inventoryPictures[i].BorderStyle = BorderStyle.None;
+                }
+                else
+                {
+                    inventoryPictures[i].BorderStyle = BorderStyle.FixedSingle;
+                }
+            }
+            game.Equip( inventoryTable.ElementAt( idx ).Key );
+            if( inventoryTable.ElementAt(idx).Key.Equals("BluePotion") || inventoryTable.ElementAt( idx ).Key.Equals( "RedPotion" ) )
+            {
+                labelAttack.Text = "Potion";
+                buttonAttackLeft.Enabled = false;
+                buttonAttackDown.Enabled = false;
+                buttonAttackRight.Enabled = false;
+                buttonAttackUp.Text = "Drink";
+            }
+            else
+            {
+                labelAttack.Text = "Attack";
+                buttonAttackLeft.Enabled = true;
+                buttonAttackDown.Enabled = true;
+                buttonAttackRight.Enabled = true;
+                buttonAttackUp.Text = "Up";
+            }
+        }
+
         private void pictureBoxInventory1_Click(object sender, EventArgs e)
         {
-            pictureBoxInventory1.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxInventory2.BorderStyle = BorderStyle.None;
-            pictureBoxInventory3.BorderStyle = BorderStyle.None;
-            pictureBoxInventory4.BorderStyle = BorderStyle.None;
-            pictureBoxInventory5.BorderStyle = BorderStyle.None;
-            pictureBoxInventory6.BorderStyle = BorderStyle.None;
-            pictureBoxInventory7.BorderStyle = BorderStyle.None;
-            pictureBoxInventory8.BorderStyle = BorderStyle.None;
-            pictureBoxInventory9.BorderStyle = BorderStyle.None;
-            game.Equip( inventoryForms[0] );
+            OnClickInventory( 0 );
         }
 
         private void pictureBoxInventory2_Click(object sender, EventArgs e)
         {
-            pictureBoxInventory1.BorderStyle = BorderStyle.None;
-            pictureBoxInventory2.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxInventory3.BorderStyle = BorderStyle.None;
-            pictureBoxInventory4.BorderStyle = BorderStyle.None;
-            pictureBoxInventory5.BorderStyle = BorderStyle.None;
-            pictureBoxInventory6.BorderStyle = BorderStyle.None;
-            pictureBoxInventory7.BorderStyle = BorderStyle.None;
-            pictureBoxInventory8.BorderStyle = BorderStyle.None;
-            pictureBoxInventory9.BorderStyle = BorderStyle.None;
-
-            game.Equip( inventoryForms[1] );
+            OnClickInventory( 1 );
         }
 
         private void pictureBoxInventory3_Click(object sender, EventArgs e)
         {
-            pictureBoxInventory1.BorderStyle = BorderStyle.None;
-            pictureBoxInventory2.BorderStyle = BorderStyle.None;
-            pictureBoxInventory3.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxInventory4.BorderStyle = BorderStyle.None;
-            pictureBoxInventory5.BorderStyle = BorderStyle.None;
-            pictureBoxInventory6.BorderStyle = BorderStyle.None;
-            pictureBoxInventory7.BorderStyle = BorderStyle.None;
-            pictureBoxInventory8.BorderStyle = BorderStyle.None;
-            pictureBoxInventory9.BorderStyle = BorderStyle.None;
-            game.Equip( inventoryForms[2] );
+            OnClickInventory( 2 );
         }
 
         private void pictureBoxInventory4_Click(object sender, EventArgs e)
         {
-            pictureBoxInventory1.BorderStyle = BorderStyle.None;
-            pictureBoxInventory2.BorderStyle = BorderStyle.None;
-            pictureBoxInventory3.BorderStyle = BorderStyle.None;
-            pictureBoxInventory4.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxInventory5.BorderStyle = BorderStyle.None;
-            pictureBoxInventory6.BorderStyle = BorderStyle.None;
-            pictureBoxInventory7.BorderStyle = BorderStyle.None;
-            pictureBoxInventory8.BorderStyle = BorderStyle.None;
-            pictureBoxInventory9.BorderStyle = BorderStyle.None;
-            game.Equip( inventoryForms[3] );
+            OnClickInventory( 3 );
         }
 
         private void pictureBoxInventory5_Click(object sender, EventArgs e)
         {
-            pictureBoxInventory1.BorderStyle = BorderStyle.None;
-            pictureBoxInventory2.BorderStyle = BorderStyle.None;
-            pictureBoxInventory3.BorderStyle = BorderStyle.None;
-            pictureBoxInventory4.BorderStyle = BorderStyle.None;
-            pictureBoxInventory5.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxInventory6.BorderStyle = BorderStyle.None;
-            pictureBoxInventory7.BorderStyle = BorderStyle.None;
-            pictureBoxInventory8.BorderStyle = BorderStyle.None;
-            pictureBoxInventory9.BorderStyle = BorderStyle.None;
-            game.Equip( inventoryForms[4] );
+            OnClickInventory( 4 );
         }
 
         private void pictureBoxInventory6_Click(object sender, EventArgs e)
         {
-            pictureBoxInventory1.BorderStyle = BorderStyle.None;
-            pictureBoxInventory2.BorderStyle = BorderStyle.None;
-            pictureBoxInventory3.BorderStyle = BorderStyle.None;
-            pictureBoxInventory4.BorderStyle = BorderStyle.None;
-            pictureBoxInventory5.BorderStyle = BorderStyle.None;
-            pictureBoxInventory6.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxInventory7.BorderStyle = BorderStyle.None;
-            pictureBoxInventory8.BorderStyle = BorderStyle.None;
-            pictureBoxInventory9.BorderStyle = BorderStyle.None;
-            game.Equip( inventoryForms[5] );
+            OnClickInventory( 5 );
         }
 
         private void pictureBoxInventory7_Click(object sender, EventArgs e)
         {
-            pictureBoxInventory1.BorderStyle = BorderStyle.None;
-            pictureBoxInventory2.BorderStyle = BorderStyle.None;
-            pictureBoxInventory3.BorderStyle = BorderStyle.None;
-            pictureBoxInventory4.BorderStyle = BorderStyle.None;
-            pictureBoxInventory5.BorderStyle = BorderStyle.None;
-            pictureBoxInventory6.BorderStyle = BorderStyle.None;
-            pictureBoxInventory7.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxInventory8.BorderStyle = BorderStyle.None;
-            pictureBoxInventory9.BorderStyle = BorderStyle.None;
-            game.Equip( inventoryForms[6] );
+            OnClickInventory( 6 );
         }
 
         private void pictureBoxInventory8_Click(object sender, EventArgs e)
         {
-            pictureBoxInventory1.BorderStyle = BorderStyle.None;
-            pictureBoxInventory2.BorderStyle = BorderStyle.None;
-            pictureBoxInventory3.BorderStyle = BorderStyle.None;
-            pictureBoxInventory4.BorderStyle = BorderStyle.None;
-            pictureBoxInventory5.BorderStyle = BorderStyle.None;
-            pictureBoxInventory6.BorderStyle = BorderStyle.None;
-            pictureBoxInventory7.BorderStyle = BorderStyle.None;
-            pictureBoxInventory8.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxInventory9.BorderStyle = BorderStyle.None;
-            game.Equip( inventoryForms[7] );
+            OnClickInventory( 7 );
         }
 
         private void pictureBoxInventory9_Click(object sender, EventArgs e)
         {
-            pictureBoxInventory1.BorderStyle = BorderStyle.None;
-            pictureBoxInventory2.BorderStyle = BorderStyle.None;
-            pictureBoxInventory3.BorderStyle = BorderStyle.None;
-            pictureBoxInventory4.BorderStyle = BorderStyle.None;
-            pictureBoxInventory5.BorderStyle = BorderStyle.None;
-            pictureBoxInventory6.BorderStyle = BorderStyle.None;
-            pictureBoxInventory7.BorderStyle = BorderStyle.None;
-            pictureBoxInventory8.BorderStyle = BorderStyle.None;
-            pictureBoxInventory9.BorderStyle = BorderStyle.FixedSingle;
-            game.Equip( inventoryForms[8] );
+            OnClickInventory( 8 );
         }
 
         private void buttonAttackUp_Click( object sender, EventArgs e )
