@@ -10,7 +10,7 @@ namespace TheQuest
     {        
         public Sword(Game game, PointVec pos )
             :
-            base(game, new Status( 0, 3, 0, 10 ), pos, 1, false )
+            base(game, new Status( 0, 3, 0, 1 * game.TileSize ), pos, 1, false )
         { }
 
         public override string Name { get { return "Sword"; } }

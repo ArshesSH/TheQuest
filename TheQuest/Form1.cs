@@ -14,6 +14,8 @@ namespace TheQuest
     {
         private Game game;
         private Random random = new Random();
+        private List<string> inventoryForms = new List<string>();
+        private KeyValuePair<string, PictureBox> curItemPair;
 
         public TheQuestForm()
         {
@@ -139,46 +141,55 @@ namespace TheQuest
                 case "Sword":
                     {
                         itemControl = pictureBoxSword;
+                        curItemPair = new KeyValuePair<string, PictureBox>( "Sword", pictureBoxSword );
                     }
                     break;
                 case "Bow":
                     {
                         itemControl = pictureBoxBow;
+                        curItemPair = new KeyValuePair<string, PictureBox>( "Bow", pictureBoxBow );
                     }
                     break;
                 case "BattleAxe":
                     {
                         itemControl = pictureBoxBattleAxe;
+                        curItemPair = new KeyValuePair<string, PictureBox>( "BattleAxe", pictureBoxBattleAxe );
                     }
                     break;
                 case "Bomb":
                     {
                         itemControl = pictureBoxBomb;
+                        curItemPair = new KeyValuePair<string, PictureBox>( "Bomb", pictureBoxBomb );
                     }
                     break;
                 case "Mace":
                     {
                         itemControl = pictureBoxMace;
+                        curItemPair = new KeyValuePair<string, PictureBox>( "Mace", pictureBoxMace );
                     }
                     break;
                 case "PotionBlue":
                     {
                         itemControl = pictureBoxPotionBlue;
+                        curItemPair = new KeyValuePair<string, PictureBox>( "PotionBlue", pictureBoxPotionBlue );
                     }
                     break;
                 case "PotionRed":
                     {
                         itemControl = pictureBoxPotionRed;
+                        curItemPair = new KeyValuePair<string, PictureBox>( "PotionRed", pictureBoxPotionRed );
                     }
                     break;
                 case "Quiver":
                     {
                         itemControl = pictureBoxQuiver;
+                        curItemPair = new KeyValuePair<string, PictureBox>( "Quiver", pictureBoxQuiver );
                     }
                     break;
                 case "Shield":
                     {
                         itemControl = pictureBoxShield;
+                        curItemPair = new KeyValuePair<string, PictureBox>( "Shield", pictureBoxShield );
                     }
                     break;
             }
@@ -187,18 +198,17 @@ namespace TheQuest
             if ( game.ItemInRoom.IsPickedUp )
             {
                 itemControl.Visible = false;
+                if( !inventoryForms.Contains(curItemPair.Key) )
+                {
+                    inventoryForms.Add( curItemPair.Key );
+                    AddToInventoryForm( curItemPair.Value, game.GamePlayer.Items.Count - 1 );
+                }
             }
             else
             {
                 itemControl.Visible = true;
             }
 
-            if (game.CheckPlayerInventory("Sword"))
-            {
-                pictureBoxInventory4.Image = pictureBoxSword.Image;
-                pictureBoxInventory4.Visible = true;
-            }
-                
 
             if (game.GamePlayer.ActorStatus.HitPoint <= 0)
             {
@@ -212,6 +222,72 @@ namespace TheQuest
                 UpdateModel();
             }
 
+        }
+
+
+        private void AddToInventoryForm(PictureBox picture, int index)
+        {
+            switch(index)
+            {
+                case 0:
+                {
+                    pictureBoxInventory1.Image = picture.Image;
+                    pictureBoxInventory1.Visible = true;
+                    break;
+                }
+                case 1:
+                {
+                    pictureBoxInventory2.Image = picture.Image;
+                    pictureBoxInventory2.Visible = true;
+                    break;
+                }
+                case 2:
+                {
+                    pictureBoxInventory3.Image = picture.Image;
+                    pictureBoxInventory3.Visible = true;
+                    break;
+                }
+                case 3:
+                {
+                    pictureBoxInventory4.Image = picture.Image;
+                    pictureBoxInventory4.Visible = true;
+                    break;
+                }
+                case 4:
+                {
+                    pictureBoxInventory5.Image = picture.Image;
+                    pictureBoxInventory5.Visible = true;
+                    break;
+                }
+                case 5:
+                {
+                    pictureBoxInventory6.Image = picture.Image;
+                    pictureBoxInventory6.Visible = true;
+                    break;
+                }
+                case 6:
+                {
+                    pictureBoxInventory7.Image = picture.Image;
+                    pictureBoxInventory7.Visible = true;
+                    break;
+                }
+                case 7:
+                {
+                    pictureBoxInventory8.Image = picture.Image;
+                    pictureBoxInventory8.Visible = true;
+                    break;
+                }
+                case 8:
+                {
+                    pictureBoxInventory9.Image = picture.Image;
+                    pictureBoxInventory9.Visible = true;
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+            }
         }
 
         private void buttonMoveUp_Click( object sender, EventArgs e )
@@ -250,47 +326,80 @@ namespace TheQuest
 
         private void pictureBoxInventory1_Click(object sender, EventArgs e)
         {
-
+            pictureBoxInventory1.BorderStyle = BorderStyle.FixedSingle;
+            game.Equip( inventoryForms[0] );
         }
 
         private void pictureBoxInventory2_Click(object sender, EventArgs e)
         {
-
+            pictureBoxInventory2.BorderStyle = BorderStyle.FixedSingle;
+            game.Equip( inventoryForms[1] );
         }
 
         private void pictureBoxInventory3_Click(object sender, EventArgs e)
         {
-
+            pictureBoxInventory3.BorderStyle = BorderStyle.FixedSingle;
+            game.Equip( inventoryForms[2] );
         }
 
         private void pictureBoxInventory4_Click(object sender, EventArgs e)
         {
-
+            pictureBoxInventory4.BorderStyle = BorderStyle.FixedSingle;
+            game.Equip( inventoryForms[3] );
         }
 
         private void pictureBoxInventory5_Click(object sender, EventArgs e)
         {
-
+            pictureBoxInventory5.BorderStyle = BorderStyle.FixedSingle;
+            game.Equip( inventoryForms[4] );
         }
 
         private void pictureBoxInventory6_Click(object sender, EventArgs e)
         {
-
+            pictureBoxInventory6.BorderStyle = BorderStyle.FixedSingle;
+            game.Equip( inventoryForms[5] );
         }
 
         private void pictureBoxInventory7_Click(object sender, EventArgs e)
         {
-
+            pictureBoxInventory7.BorderStyle = BorderStyle.FixedSingle;
+            game.Equip( inventoryForms[6] );
         }
 
         private void pictureBoxInventory8_Click(object sender, EventArgs e)
         {
-
+            pictureBoxInventory8.BorderStyle = BorderStyle.FixedSingle;
+            game.Equip( inventoryForms[7] );
         }
 
         private void pictureBoxInventory9_Click(object sender, EventArgs e)
         {
+            pictureBoxInventory9.BorderStyle = BorderStyle.FixedSingle;
+            game.Equip( inventoryForms[8] );
+        }
 
+        private void buttonAttackUp_Click( object sender, EventArgs e )
+        {
+            game.PlayerAttack( PointVec.DirUp, random );
+            UpdateModel();
+        }
+
+        private void buttonAttackLeft_Click( object sender, EventArgs e )
+        {
+            game.PlayerAttack( PointVec.DirLeft, random );
+            UpdateModel();
+        }
+
+        private void buttonAttackRight_Click( object sender, EventArgs e )
+        {
+            game.PlayerAttack( PointVec.DirRight, random );
+            UpdateModel();
+        }
+
+        private void buttonAttackDown_Click( object sender, EventArgs e )
+        {
+            game.PlayerAttack( PointVec.DirDown, random );
+            UpdateModel();
         }
     }
 }

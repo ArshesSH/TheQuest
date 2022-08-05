@@ -11,12 +11,10 @@ namespace TheQuest
         private const int maxHP = 10;
         private const int damage = 4;
         private const int speed = 1;
-        private const int attackRange = 1;
-        private const int searchRange = 5;
 
         public Ghoul( Game game, PointVec pos )
          :
-        base( game, new Status( maxHP, damage, speed * game.TileSize, attackRange * game.TileSize), pos, searchRange * game.TileSize)
+        base( game, new Status( maxHP, damage, speed * game.TileSize, 1 * game.TileSize), pos, 5 * game.TileSize)
         { }
 
         public override void Move( Random random )
@@ -27,13 +25,15 @@ namespace TheQuest
             {
                 if ( random.Next( 0, 3 ) < 2 )
                 {
-                    game.GamePlayer.Damaged( status.Damage, random );
+                    if( IsPlayerInRange (SerachDistance))
+                    {
+                        base.Move( playerDir );
+                    }
+                    if ( IsPlayerInRange( status.Range ) )
+                    {
+                        game.GamePlayer.Damaged( status.Damage, random );
+                    }
                 }
-            }
-
-            if ( IsNearby((pos - game.GamePlayer.Pos), status.Range ) )
-            {
-                base.Move( playerDir );
             }
         }
     }

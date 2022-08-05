@@ -11,28 +11,28 @@ namespace TheQuest
         private const int maxHP = 5;
         private const int damage = 6;
         private const int speed = 1;
-        private const int attackRange = 10;
-        private const int searchRange = 10;
 
         public Wizard( Game game, PointVec pos )
          :
-        base( game, new Status( maxHP, damage, speed * game.TileSize, attackRange * game.TileSize), pos, searchRange * game.TileSize)
+        base( game, new Status( maxHP, damage, speed * game.TileSize, 10 * game.TileSize), pos, 20 * game.TileSize)
         { }
 
         public override void Move( Random random )
         {
             PointVec playerDir = FindPlayerDir( game.GamePlayer.Pos );
-
-            if ( random.Next( 0, 2 ) == 0 )
+            if ( IsPlayerInRange( SerachDistance ) )
+            {
+                base.Move( playerDir );
+                if( IsPlayerInRange( status.Range ) )
+                {
+                    game.GamePlayer.Damaged( status.Damage, random );
+                }
+            }
+            else if ( random.Next( 0, 2 ) == 0 )
             {
                 PointVec.GetRandomDir( random );
             }
             else
-            {
-                base.Move( playerDir );
-            }
-
-            if ( IsNearby((pos - game.GamePlayer.Pos), status.Range ) )
             {
                 base.Move( playerDir );
             }

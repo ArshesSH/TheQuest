@@ -10,6 +10,7 @@ namespace TheQuest
     abstract class Enemy : Actor
     {
         private int searchDistance;
+        public int SerachDistance { get { return searchDistance; } }
         public Enemy( Game game, Status status, PointVec pos, int searchDistance )
             :
             base( game, status, pos )
@@ -19,22 +20,22 @@ namespace TheQuest
 
         public abstract void Move( Random random );
 
-        protected bool IsPlayerInRange()
+        protected bool IsPlayerInRange(int distance)
         {
-            return IsNearby( game.GamePlayer.Pos, searchDistance * searchDistance );
+            return IsNearby( (pos - game.GamePlayer.Pos), distance );
         }
         protected PointVec FindPlayerDir( PointVec playerPos )
         {
             PointVec dir;
-            if ( playerPos.P.X > pos.P.X + searchDistance ) 
+            if ( playerPos.P.X > pos.P.X + game.TileSize ) 
             {
                 dir = PointVec.DirRight;
             }
-            else if ( playerPos.P.X < pos.P.X + searchDistance )
+            else if ( playerPos.P.X < pos.P.X + game.TileSize )
             {
                 dir = PointVec.DirLeft;
             }
-            else if ( playerPos.P.Y > pos.P.Y + searchDistance )
+            else if ( playerPos.P.Y < pos.P.Y + game.TileSize )
             {
                 dir = PointVec.DirUp;
             }

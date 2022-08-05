@@ -11,25 +11,22 @@ namespace TheQuest
         private const int maxHP = 8;
         private const int damage = 3;
         private const int speed = 1;
-        private const int attackRange = 1;
-        private const int searchRange = 5;
 
         public Ghost( Game game, PointVec pos )
          :
-        base( game, new Status( maxHP, damage, speed * game.TileSize, attackRange * game.TileSize), pos, searchRange * game.TileSize)
+        base( game, new Status( maxHP, damage, speed * game.TileSize, 1 * game.TileSize), pos, 5 * game.TileSize)
         { }
 
         public override void Move( Random random )
         {
-            PointVec playerDir = FindPlayerDir( game.GamePlayer.Pos );
-            if ( random.Next( 0, 3 ) < 1 )
-            {
-                base.Move( playerDir );
-            }
-
-            if ( IsNearby((pos - game.GamePlayer.Pos), status.Range ) )
+            if ( IsPlayerInRange( status.Range ) )
             {
                 game.GamePlayer.Damaged( status.Damage, random );
+            }
+            else if( random.Next( 0, 3 ) < 1 )
+            {
+                PointVec playerDir = FindPlayerDir( game.GamePlayer.Pos );
+                base.Move( playerDir );
             }
         }
     }

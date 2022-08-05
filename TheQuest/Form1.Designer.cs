@@ -159,6 +159,7 @@ namespace TheQuest
             this.buttonAttackDown.TabIndex = 4;
             this.buttonAttackDown.Text = "Down";
             this.buttonAttackDown.UseVisualStyleBackColor = true;
+            this.buttonAttackDown.Click += new System.EventHandler(this.buttonAttackDown_Click);
             // 
             // buttonAttackRight
             // 
@@ -168,6 +169,7 @@ namespace TheQuest
             this.buttonAttackRight.TabIndex = 5;
             this.buttonAttackRight.Text = "Right";
             this.buttonAttackRight.UseVisualStyleBackColor = true;
+            this.buttonAttackRight.Click += new System.EventHandler(this.buttonAttackRight_Click);
             // 
             // buttonAttackLeft
             // 
@@ -177,6 +179,7 @@ namespace TheQuest
             this.buttonAttackLeft.TabIndex = 6;
             this.buttonAttackLeft.Text = "Left";
             this.buttonAttackLeft.UseVisualStyleBackColor = true;
+            this.buttonAttackLeft.Click += new System.EventHandler(this.buttonAttackLeft_Click);
             // 
             // buttonAttackUp
             // 
@@ -186,6 +189,7 @@ namespace TheQuest
             this.buttonAttackUp.TabIndex = 7;
             this.buttonAttackUp.Text = "Up";
             this.buttonAttackUp.UseVisualStyleBackColor = true;
+            this.buttonAttackUp.Click += new System.EventHandler(this.buttonAttackUp_Click);
             // 
             // labelAttack
             // 

@@ -12,12 +12,10 @@ namespace TheQuest
         private const int maxHP = 6;
         private const int damage = 2;
         private const int speed = 1;
-        private const int attackRange = 1;
-        private const int searchRange = 5;
 
         public Bat(Game game, PointVec pos)
             :
-            base(game, new Status(maxHP, damage, speed * game.TileSize, attackRange * game.TileSize ), pos, searchRange * game.TileSize)
+            base(game, new Status(maxHP, damage, speed * game.TileSize, 1 * game.TileSize ), pos, 5 * game.TileSize)
         { }
 
         public override void Move(Random random)
@@ -32,7 +30,7 @@ namespace TheQuest
                 base.Move( playerDir );
             }
 
-            if ( IsNearby( (pos - game.GamePlayer.Pos), status.Range ) )
+            if ( IsPlayerInRange(status.Range) )
             {
                 game.GamePlayer.Damaged( status.Damage, random );
             }
