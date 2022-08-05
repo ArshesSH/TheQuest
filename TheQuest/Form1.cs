@@ -17,25 +17,24 @@ namespace TheQuest
         //private List<string> inventoryForms = new List<string>();
         private Dictionary<string, PictureBox> inventoryTable = new Dictionary<string, PictureBox>();
         private KeyValuePair<string, PictureBox> curItemPair;
-        private List<PictureBox> inventoryPictures = new List<PictureBox>();
 
         public TheQuestForm()
         {
             InitializeComponent();
-            InitInventoryPicturebox();
+            InitInventoryTable();
         }
 
-        private void InitInventoryPicturebox()
+        private void InitInventoryTable()
         {
-            inventoryPictures.Add( pictureBoxInventory1 );
-            inventoryPictures.Add( pictureBoxInventory2 );
-            inventoryPictures.Add( pictureBoxInventory3 );
-            inventoryPictures.Add( pictureBoxInventory4 );
-            inventoryPictures.Add( pictureBoxInventory5 );
-            inventoryPictures.Add( pictureBoxInventory6 );
-            inventoryPictures.Add( pictureBoxInventory7 );
-            inventoryPictures.Add( pictureBoxInventory8 );
-            inventoryPictures.Add( pictureBoxInventory9 );
+            inventoryTable.Add("Sword", pictureBoxInventory1 );
+            inventoryTable.Add("Bow", pictureBoxInventory2 );
+            inventoryTable.Add("Mace", pictureBoxInventory3 );
+            inventoryTable.Add("BattleAxe", pictureBoxInventory4 );
+            inventoryTable.Add("BluePotion", pictureBoxInventory5 );
+            inventoryTable.Add("RedPotion", pictureBoxInventory6 );
+            inventoryTable.Add("Shield", pictureBoxInventory7 );
+            inventoryTable.Add("Bomb", pictureBoxInventory8 );
+            inventoryTable.Add("Quiver", pictureBoxInventory9 );
         }
 
         private void UpdateModel()
@@ -233,8 +232,6 @@ namespace TheQuest
                     inventoryTable.Add( curItemPair.Key, curItemPair.Value );
 
                     int inventoryEndIdx = game.GamePlayer.Items.Count - 1;
-                    inventoryPictures[inventoryEndIdx].Image = curItemPair.Value.Image;
-                    //inventoryPictures[inventoryEndIdx].Visible = true;
                 }
             }
             else
@@ -242,17 +239,13 @@ namespace TheQuest
                 itemControl.Visible = true;
             }
 
-            for( int i = 0; i < inventoryTable.Count; ++i )
+            foreach(KeyValuePair<string, PictureBox> pair in inventoryTable)
             {
-                if( game.GamePlayer.Items.Contains(inventoryTable.ElementAt(i).Key) )
-                {
-                    inventoryPictures[i].Visible = true;
-                }
-                else
-                {
-
-                    inventoryPictures[i].Visible = false;
-                }
+                pair.Value.Visible = false;
+            }
+            foreach (string item in game.GamePlayer.Items)
+            {
+                inventoryTable[item].Visible = true;
             }
 
             if( game.GamePlayer.EquippedIdx == -1)
@@ -380,21 +373,23 @@ namespace TheQuest
             UpdateModel();
         }
 
-        public void OnClickInventory(int idx)
+        public void OnClickInventory(string key)
         {
-            for( int i = 0; i < inventoryPictures.Count; ++i )
+            for( int i = 0; i < inventoryTable.Count; ++i )
             {
-                if( i != idx)
+                string curKey = inventoryTable.ElementAt(i).Key;
+                if (curKey.Equals(key) )
                 {
-                    inventoryPictures[i].BorderStyle = BorderStyle.None;
+                    inventoryTable[curKey].BorderStyle = BorderStyle.FixedSingle;
                 }
                 else
                 {
-                    inventoryPictures[i].BorderStyle = BorderStyle.FixedSingle;
+                    inventoryTable[curKey].BorderStyle = BorderStyle.None;
                 }
             }
-            game.Equip( inventoryTable.ElementAt( idx ).Key );
-            if( inventoryTable.ElementAt(idx).Key.Equals("BluePotion") || inventoryTable.ElementAt( idx ).Key.Equals( "RedPotion" ) )
+
+            game.Equip( key );
+            if( key.Equals("BluePotion") || key.Equals( "RedPotion" ) )
             {
                 labelAttack.Text = "Potion";
                 buttonAttackLeft.Enabled = false;
@@ -414,47 +409,47 @@ namespace TheQuest
 
         private void pictureBoxInventory1_Click(object sender, EventArgs e)
         {
-            OnClickInventory( 0 );
+            OnClickInventory( "Sword" );
         }
 
         private void pictureBoxInventory2_Click(object sender, EventArgs e)
         {
-            OnClickInventory( 1 );
+            OnClickInventory( "Bow" );
         }
 
         private void pictureBoxInventory3_Click(object sender, EventArgs e)
         {
-            OnClickInventory( 2 );
+            OnClickInventory( "Mace" );
         }
 
         private void pictureBoxInventory4_Click(object sender, EventArgs e)
         {
-            OnClickInventory( 3 );
+            OnClickInventory( "BattleAxe" );
         }
 
         private void pictureBoxInventory5_Click(object sender, EventArgs e)
         {
-            OnClickInventory( 4 );
+            OnClickInventory( "BluePotion" );
         }
 
         private void pictureBoxInventory6_Click(object sender, EventArgs e)
         {
-            OnClickInventory( 5 );
+            OnClickInventory( "RedPotion" );
         }
 
         private void pictureBoxInventory7_Click(object sender, EventArgs e)
         {
-            OnClickInventory( 6 );
+            OnClickInventory( "Shield" );
         }
 
         private void pictureBoxInventory8_Click(object sender, EventArgs e)
         {
-            OnClickInventory( 7 );
+            OnClickInventory( "Bomb" );
         }
 
         private void pictureBoxInventory9_Click(object sender, EventArgs e)
         {
-            OnClickInventory( 8 );
+            OnClickInventory( "Quiver" );
         }
 
         private void buttonAttackUp_Click( object sender, EventArgs e )

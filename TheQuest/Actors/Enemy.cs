@@ -45,5 +45,9 @@ namespace TheQuest
             }
             return dir;
         }
+        public bool IsDead()
+        {
+            return status.HitPoint <= 0;
+        }
     }
 }

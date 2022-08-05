@@ -44,6 +44,9 @@ namespace TheQuest
             {
                 enemy.Move(random);
             }
+            Enemies.RemoveAll(
+                (Enemy enemy) => { return enemy.IsDead(); }
+            );
         }
         private PointVec GetRandomLocation(Random random)
         {
@@ -124,6 +127,17 @@ namespace TheQuest
                     break;
                 }
                 case 8:
+                {
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    Enemies.Add(new Wizard(this, GetRandomLocation(random)));
+                    ItemInRoom = new RedPotion(this, GetRandomLocation(random));
+                    break;
+                }
+
+                case 9:
                 {
                     Application.Exit();
                     break;

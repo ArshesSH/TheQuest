@@ -19,7 +19,8 @@ namespace TheQuest
             {
                 foreach ( Enemy enemy in game.Enemies )
                 {
-                    if ( IsNearby( enemy.Pos - game.GamePlayer.Pos, radius ) )
+                    PointVec distVec = enemy.Pos - game.GamePlayer.Pos;
+                    if ( IsNearby(distVec, radius ) && dir.IsEqual(distVec.GetNormalized()) )
                     {
                         enemy.Damaged( status.Damage, random );
                         return true;
