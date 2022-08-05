@@ -14,7 +14,6 @@ namespace TheQuest
     {
         private Game game;
         private Random random = new Random();
-        //private List<string> inventoryForms = new List<string>();
         private Dictionary<string, PictureBox> inventoryTable = new Dictionary<string, PictureBox>();
         private KeyValuePair<string, PictureBox> curItemPair;
 
@@ -23,7 +22,6 @@ namespace TheQuest
             InitializeComponent();
             InitInventoryTable();
         }
-
         private void InitInventoryTable()
         {
             inventoryTable.Add("Sword", pictureBoxInventory1 );
@@ -36,7 +34,6 @@ namespace TheQuest
             inventoryTable.Add("Bomb", pictureBoxInventory8 );
             inventoryTable.Add("Quiver", pictureBoxInventory9 );
         }
-
         private void UpdateModel()
         {
             // Update Player
@@ -46,7 +43,6 @@ namespace TheQuest
 
 
             // Update Enemies
-
             bool showBat = false;
             bool showGhost = false;
             bool showGhoul = false;
@@ -96,7 +92,6 @@ namespace TheQuest
                     }
                 }
             }
-
             if ( showBat )
             {
                 pictureBoxBat.Visible = true;
@@ -157,6 +152,7 @@ namespace TheQuest
             pictureBoxQuiver.Visible = false;
             pictureBoxShield.Visible = false;
 
+            // Update ItemInRoom
             Control itemControl = null;
             switch ( game.ItemInRoom.Name )
             {
@@ -220,24 +216,18 @@ namespace TheQuest
             if ( game.ItemInRoom.IsPickedUp )
             {
                 itemControl.Visible = false;
-
-                //if( !inventoryForms.Contains(curItemPair.Key) )
-                //{
-                //    inventoryForms.Add( curItemPair.Key );
-                //    AddToInventoryForm( curItemPair.Value, game.GamePlayer.Items.Count - 1 );
-                //}
-
+                
+                // Add item to invetory table if key is not in table
                 if( !inventoryTable.ContainsKey(curItemPair.Key) )
                 {
                     inventoryTable.Add( curItemPair.Key, curItemPair.Value );
-
-                    int inventoryEndIdx = game.GamePlayer.Items.Count - 1;
                 }
             }
             else
             {
                 itemControl.Visible = true;
             }
+
 
             foreach(KeyValuePair<string, PictureBox> pair in inventoryTable)
             {
@@ -261,7 +251,6 @@ namespace TheQuest
                 pictureBoxInventory9.BorderStyle = BorderStyle.None;
             }
 
-
             if (game.GamePlayer.ActorStatus.HitPoint <= 0)
             {
                 MessageBox.Show( "You Died" );
@@ -272,73 +261,6 @@ namespace TheQuest
                 MessageBox.Show( "You have defeated the enemies on this level" );
                 game.NewLevel( random );
                 UpdateModel();
-            }
-
-        }
-
-
-        private void AddToInventoryForm(PictureBox picture, int index)
-        {
-            switch(index)
-            {
-                case 0:
-                {
-                    pictureBoxInventory1.Image = picture.Image;
-                    pictureBoxInventory1.Visible = true;
-                    break;
-                }
-                case 1:
-                {
-                    pictureBoxInventory2.Image = picture.Image;
-                    pictureBoxInventory2.Visible = true;
-                    break;
-                }
-                case 2:
-                {
-                    pictureBoxInventory3.Image = picture.Image;
-                    pictureBoxInventory3.Visible = true;
-                    break;
-                }
-                case 3:
-                {
-                    pictureBoxInventory4.Image = picture.Image;
-                    pictureBoxInventory4.Visible = true;
-                    break;
-                }
-                case 4:
-                {
-                    pictureBoxInventory5.Image = picture.Image;
-                    pictureBoxInventory5.Visible = true;
-                    break;
-                }
-                case 5:
-                {
-                    pictureBoxInventory6.Image = picture.Image;
-                    pictureBoxInventory6.Visible = true;
-                    break;
-                }
-                case 6:
-                {
-                    pictureBoxInventory7.Image = picture.Image;
-                    pictureBoxInventory7.Visible = true;
-                    break;
-                }
-                case 7:
-                {
-                    pictureBoxInventory8.Image = picture.Image;
-                    pictureBoxInventory8.Visible = true;
-                    break;
-                }
-                case 8:
-                {
-                    pictureBoxInventory9.Image = picture.Image;
-                    pictureBoxInventory9.Visible = true;
-                    break;
-                }
-                default:
-                {
-                    break;
-                }
             }
         }
 
