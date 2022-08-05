@@ -21,7 +21,7 @@ namespace TheQuest
         {
             PointVec playerDir = FindPlayerDir( game.GamePlayer.Pos );
 
-            if( status.HitPoint == 1)
+            if( status.HitPoint >= 1)
             {
                 if ( random.Next( 0, 3 ) < 2 )
                 {
