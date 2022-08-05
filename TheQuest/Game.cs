@@ -22,7 +22,7 @@ namespace TheQuest
         public Game( MyRect rect )
         {
             screenRect = rect;
-            player = new Player( this, new Status( 5, 0, TileSize, 0 ), new PointVec( 100, 60 ) );
+            player = new Player( this, new Status( 500, 0, TileSize, 0 ), new PointVec( 100, 60 ) );
         }
 
         public void UpdateEnemies(Random random)

@@ -250,6 +250,7 @@ namespace TheQuest
                 }
                 else
                 {
+
                     inventoryPictures[i].Visible = false;
                 }
             }
