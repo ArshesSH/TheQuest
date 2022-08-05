@@ -9,7 +9,9 @@ namespace TheQuest
 {
     class Player : Actor
     {
-        private Item equippedItem;
+        //private Item equippedItem;
+        private int equippedIdx = -1;
+        public int EquippedIdx { get { return equippedIdx; } }
         private List<Item> inventory = new List<Item>();
         public List<string> Items
         {
@@ -30,9 +32,18 @@ namespace TheQuest
 
         public void Attack(PointVec dir, Random random)
         {
-            if( equippedItem != null )
+            //if( equippedItem != null )
+            //{
+            //    equippedItem.Use(dir, random);
+            //}
+            if( equippedIdx != -1)
             {
-                equippedItem.Use(dir, random);
+                inventory[equippedIdx].Use( dir, random );
+                if( inventory[equippedIdx].Count <= 0 )
+                {
+                    inventory.RemoveAt( equippedIdx );
+                    equippedIdx = -1;
+                }
             }
         }
 
@@ -52,11 +63,19 @@ namespace TheQuest
 
         public void Equip(string weaponName)
         {
-            foreach(Item item in inventory)
+            //foreach(Item item in inventory)
+            //{
+            //    if ( item.Name == weaponName )
+            //    {
+            //        equippedItem = item;
+            //    }
+            //}
+
+            for(int i = 0; i < inventory.Count; ++i )
             {
-                if(item.Name == weaponName)
+                if(inventory[i].Name == weaponName)
                 {
-                    equippedItem = item;
+                    equippedIdx = i;
                 }
             }
         }

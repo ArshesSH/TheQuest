@@ -11,6 +11,7 @@ namespace TheQuest
     {
         private readonly int maxCnt;
         private int curCnt;
+        public int Count { get { return curCnt; } }
         private bool isConsumable;
         private bool isPickedUp;
         public bool IsPickedUp { get { return isPickedUp; } }
@@ -32,7 +33,7 @@ namespace TheQuest
         {
             if( isConsumable)
             {
-                if( curCnt < 0)
+                if( curCnt > 0)
                 {
                     Effect(dir, random);
                     curCnt--;

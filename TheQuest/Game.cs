@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace TheQuest
 {
@@ -11,7 +12,7 @@ namespace TheQuest
     {
         private MyRect screenRect;
         private Player player;
-        private int level = 0;
+        private int level = 1;
         public MyRect ScreenRect { get { return screenRect; } }
         public Player GamePlayer { get { return player; } }
         public List<Enemy> Enemies;
@@ -21,7 +22,7 @@ namespace TheQuest
         public Game( MyRect rect )
         {
             screenRect = rect;
-            player = new Player( this, new Status( 3, 0, TileSize, 0 ), new PointVec( 100, 60 ) );
+            player = new Player( this, new Status( 5, 0, TileSize, 0 ), new PointVec( 100, 60 ) );
         }
 
         public void UpdateEnemies(Random random)
@@ -60,7 +61,73 @@ namespace TheQuest
                     Enemies.Add(new Bat(this, GetRandomLocation(random)));
                     ItemInRoom = new Sword(this, GetRandomLocation(random));
                     break;
-                }    
+                }
+                case 2:
+                {
+                    Enemies = new List<Enemy>();
+                    Enemies.Add( new Ghost( this, GetRandomLocation( random ) ) );
+                    ItemInRoom = new BluePotion( this, GetRandomLocation( random ) );
+                    break;
+                }
+                case 3:
+                {
+                    Enemies = new List<Enemy>();
+                    Enemies.Add( new Ghoul( this, GetRandomLocation( random ) ) );
+                    ItemInRoom = new Bow( this, GetRandomLocation( random ) );
+                    break;
+                }
+                case 4:
+                {
+                    Enemies = new List<Enemy>();
+                    Enemies.Add( new Bat( this, GetRandomLocation( random ) ) );
+                    Enemies.Add( new Ghost( this, GetRandomLocation( random ) ) );
+                    if ( player.Items.Contains("Bow"))
+                    {
+                        ItemInRoom = new BluePotion( this, GetRandomLocation( random ) );
+                    }
+                    else
+                    {
+                        ItemInRoom = new Bow( this, GetRandomLocation( random ) );
+                    }
+                    break;
+                }
+                case 5:
+                {
+                    Enemies = new List<Enemy>();
+                    Enemies.Add( new Bat( this, GetRandomLocation( random ) ) );
+                    Enemies.Add( new Ghoul( this, GetRandomLocation( random ) ) );
+                    ItemInRoom = new RedPotion( this, GetRandomLocation( random ) );
+                    break;
+                }
+                case 6:
+                {
+                    Enemies = new List<Enemy>();
+                    Enemies.Add( new Ghost( this, GetRandomLocation( random ) ) );
+                    Enemies.Add( new Ghoul( this, GetRandomLocation( random ) ) );
+                    ItemInRoom = new Mace( this, GetRandomLocation( random ) );
+                    break;
+                }
+                case 7:
+                {
+                    Enemies = new List<Enemy>();
+                    Enemies.Add( new Bat( this, GetRandomLocation( random ) ) );
+                    Enemies.Add( new Ghost( this, GetRandomLocation( random ) ) );
+                    Enemies.Add( new Ghoul( this, GetRandomLocation( random ) ) );
+                    if ( player.Items.Contains( "Mace" ) )
+                    {
+                        ItemInRoom = new RedPotion( this, GetRandomLocation( random ) );
+                    }
+                    else
+                    {
+                        ItemInRoom = new Mace( this, GetRandomLocation( random ) );
+                    }
+                    break;
+                }
+                case 8:
+                {
+                    Application.Exit();
+                    break;
+                }
             }
         }
         public void Equip(string weaponName)

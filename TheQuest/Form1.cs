@@ -86,6 +86,8 @@ namespace TheQuest
             if ( showBat )
             {
                 pictureBoxBat.Visible = true;
+                labelBat.Visible = true;
+                labelBatHP.Visible = true;
             }
             else
             {
@@ -96,6 +98,8 @@ namespace TheQuest
             if ( showGhost )
             {
                 pictureBoxGhost.Visible = true;
+                labelGhost.Visible = true;
+                labelGhostHP.Visible = true;
             }
             else
             {
@@ -106,6 +110,8 @@ namespace TheQuest
             if ( showGhoul )
             {
                 pictureBoxGhoul.Visible = true;
+                labelGhoul.Visible = true;
+                labelGhoulHP.Visible = true;
             }
             else
             {
@@ -116,6 +122,8 @@ namespace TheQuest
             if ( showWizard )
             {
                 pictureBoxWizard.Visible = true;
+                labelWizard.Visible = true;
+                labelWizardHP.Visible = true;
             }
             else
             {
@@ -168,16 +176,16 @@ namespace TheQuest
                         curItemPair = new KeyValuePair<string, PictureBox>( "Mace", pictureBoxMace );
                     }
                     break;
-                case "PotionBlue":
+                case "BluePotion":
                     {
                         itemControl = pictureBoxPotionBlue;
-                        curItemPair = new KeyValuePair<string, PictureBox>( "PotionBlue", pictureBoxPotionBlue );
+                        curItemPair = new KeyValuePair<string, PictureBox>( "BluePotion", pictureBoxPotionBlue );
                     }
                     break;
-                case "PotionRed":
+                case "RedPotion":
                     {
                         itemControl = pictureBoxPotionRed;
-                        curItemPair = new KeyValuePair<string, PictureBox>( "PotionRed", pictureBoxPotionRed );
+                        curItemPair = new KeyValuePair<string, PictureBox>( "RedPotion", pictureBoxPotionRed );
                     }
                     break;
                 case "Quiver":
@@ -198,6 +206,7 @@ namespace TheQuest
             if ( game.ItemInRoom.IsPickedUp )
             {
                 itemControl.Visible = false;
+
                 if( !inventoryForms.Contains(curItemPair.Key) )
                 {
                     inventoryForms.Add( curItemPair.Key );
@@ -207,6 +216,19 @@ namespace TheQuest
             else
             {
                 itemControl.Visible = true;
+            }
+
+            if( game.GamePlayer.EquippedIdx == -1)
+            {
+                pictureBoxInventory1.BorderStyle = BorderStyle.None;
+                pictureBoxInventory2.BorderStyle = BorderStyle.None;
+                pictureBoxInventory3.BorderStyle = BorderStyle.None;
+                pictureBoxInventory4.BorderStyle = BorderStyle.None;
+                pictureBoxInventory5.BorderStyle = BorderStyle.None;
+                pictureBoxInventory6.BorderStyle = BorderStyle.None;
+                pictureBoxInventory7.BorderStyle = BorderStyle.None;
+                pictureBoxInventory8.BorderStyle = BorderStyle.None;
+                pictureBoxInventory9.BorderStyle = BorderStyle.None;
             }
 
 
@@ -317,63 +339,133 @@ namespace TheQuest
         private void TheQuestForm_Load( object sender, EventArgs e )
         {
             game = new Game( new MyRect( 100, 60, 650, 260 ) );
-
             game.NewLevel( random );
             UpdateModel();
-
-
         }
 
         private void pictureBoxInventory1_Click(object sender, EventArgs e)
         {
             pictureBoxInventory1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxInventory2.BorderStyle = BorderStyle.None;
+            pictureBoxInventory3.BorderStyle = BorderStyle.None;
+            pictureBoxInventory4.BorderStyle = BorderStyle.None;
+            pictureBoxInventory5.BorderStyle = BorderStyle.None;
+            pictureBoxInventory6.BorderStyle = BorderStyle.None;
+            pictureBoxInventory7.BorderStyle = BorderStyle.None;
+            pictureBoxInventory8.BorderStyle = BorderStyle.None;
+            pictureBoxInventory9.BorderStyle = BorderStyle.None;
             game.Equip( inventoryForms[0] );
         }
 
         private void pictureBoxInventory2_Click(object sender, EventArgs e)
         {
+            pictureBoxInventory1.BorderStyle = BorderStyle.None;
             pictureBoxInventory2.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxInventory3.BorderStyle = BorderStyle.None;
+            pictureBoxInventory4.BorderStyle = BorderStyle.None;
+            pictureBoxInventory5.BorderStyle = BorderStyle.None;
+            pictureBoxInventory6.BorderStyle = BorderStyle.None;
+            pictureBoxInventory7.BorderStyle = BorderStyle.None;
+            pictureBoxInventory8.BorderStyle = BorderStyle.None;
+            pictureBoxInventory9.BorderStyle = BorderStyle.None;
+
             game.Equip( inventoryForms[1] );
         }
 
         private void pictureBoxInventory3_Click(object sender, EventArgs e)
         {
+            pictureBoxInventory1.BorderStyle = BorderStyle.None;
+            pictureBoxInventory2.BorderStyle = BorderStyle.None;
             pictureBoxInventory3.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxInventory4.BorderStyle = BorderStyle.None;
+            pictureBoxInventory5.BorderStyle = BorderStyle.None;
+            pictureBoxInventory6.BorderStyle = BorderStyle.None;
+            pictureBoxInventory7.BorderStyle = BorderStyle.None;
+            pictureBoxInventory8.BorderStyle = BorderStyle.None;
+            pictureBoxInventory9.BorderStyle = BorderStyle.None;
             game.Equip( inventoryForms[2] );
         }
 
         private void pictureBoxInventory4_Click(object sender, EventArgs e)
         {
+            pictureBoxInventory1.BorderStyle = BorderStyle.None;
+            pictureBoxInventory2.BorderStyle = BorderStyle.None;
+            pictureBoxInventory3.BorderStyle = BorderStyle.None;
             pictureBoxInventory4.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxInventory5.BorderStyle = BorderStyle.None;
+            pictureBoxInventory6.BorderStyle = BorderStyle.None;
+            pictureBoxInventory7.BorderStyle = BorderStyle.None;
+            pictureBoxInventory8.BorderStyle = BorderStyle.None;
+            pictureBoxInventory9.BorderStyle = BorderStyle.None;
             game.Equip( inventoryForms[3] );
         }
 
         private void pictureBoxInventory5_Click(object sender, EventArgs e)
         {
+            pictureBoxInventory1.BorderStyle = BorderStyle.None;
+            pictureBoxInventory2.BorderStyle = BorderStyle.None;
+            pictureBoxInventory3.BorderStyle = BorderStyle.None;
+            pictureBoxInventory4.BorderStyle = BorderStyle.None;
             pictureBoxInventory5.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxInventory6.BorderStyle = BorderStyle.None;
+            pictureBoxInventory7.BorderStyle = BorderStyle.None;
+            pictureBoxInventory8.BorderStyle = BorderStyle.None;
+            pictureBoxInventory9.BorderStyle = BorderStyle.None;
             game.Equip( inventoryForms[4] );
         }
 
         private void pictureBoxInventory6_Click(object sender, EventArgs e)
         {
+            pictureBoxInventory1.BorderStyle = BorderStyle.None;
+            pictureBoxInventory2.BorderStyle = BorderStyle.None;
+            pictureBoxInventory3.BorderStyle = BorderStyle.None;
+            pictureBoxInventory4.BorderStyle = BorderStyle.None;
+            pictureBoxInventory5.BorderStyle = BorderStyle.None;
             pictureBoxInventory6.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxInventory7.BorderStyle = BorderStyle.None;
+            pictureBoxInventory8.BorderStyle = BorderStyle.None;
+            pictureBoxInventory9.BorderStyle = BorderStyle.None;
             game.Equip( inventoryForms[5] );
         }
 
         private void pictureBoxInventory7_Click(object sender, EventArgs e)
         {
+            pictureBoxInventory1.BorderStyle = BorderStyle.None;
+            pictureBoxInventory2.BorderStyle = BorderStyle.None;
+            pictureBoxInventory3.BorderStyle = BorderStyle.None;
+            pictureBoxInventory4.BorderStyle = BorderStyle.None;
+            pictureBoxInventory5.BorderStyle = BorderStyle.None;
+            pictureBoxInventory6.BorderStyle = BorderStyle.None;
             pictureBoxInventory7.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxInventory8.BorderStyle = BorderStyle.None;
+            pictureBoxInventory9.BorderStyle = BorderStyle.None;
             game.Equip( inventoryForms[6] );
         }
 
         private void pictureBoxInventory8_Click(object sender, EventArgs e)
         {
+            pictureBoxInventory1.BorderStyle = BorderStyle.None;
+            pictureBoxInventory2.BorderStyle = BorderStyle.None;
+            pictureBoxInventory3.BorderStyle = BorderStyle.None;
+            pictureBoxInventory4.BorderStyle = BorderStyle.None;
+            pictureBoxInventory5.BorderStyle = BorderStyle.None;
+            pictureBoxInventory6.BorderStyle = BorderStyle.None;
+            pictureBoxInventory7.BorderStyle = BorderStyle.None;
             pictureBoxInventory8.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxInventory9.BorderStyle = BorderStyle.None;
             game.Equip( inventoryForms[7] );
         }
 
         private void pictureBoxInventory9_Click(object sender, EventArgs e)
         {
+            pictureBoxInventory1.BorderStyle = BorderStyle.None;
+            pictureBoxInventory2.BorderStyle = BorderStyle.None;
+            pictureBoxInventory3.BorderStyle = BorderStyle.None;
+            pictureBoxInventory4.BorderStyle = BorderStyle.None;
+            pictureBoxInventory5.BorderStyle = BorderStyle.None;
+            pictureBoxInventory6.BorderStyle = BorderStyle.None;
+            pictureBoxInventory7.BorderStyle = BorderStyle.None;
+            pictureBoxInventory8.BorderStyle = BorderStyle.None;
             pictureBoxInventory9.BorderStyle = BorderStyle.FixedSingle;
             game.Equip( inventoryForms[8] );
         }
